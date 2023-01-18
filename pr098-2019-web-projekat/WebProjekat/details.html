@@ -1,0 +1,400 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+
+
+
+        .button {
+            align-items: center;
+            background-color: #3EB2FD;
+            background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+            background-size: calc(100% + 20px) calc(100% + 20px);
+            border-radius: 100px;
+            border-width: 0;
+            box-shadow: none;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: CircularStd,sans-serif;
+            font-size: 1rem;
+            height: auto;
+            justify-content: center;
+            line-height: 1.5;
+            padding: 6px 20px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color .2s,background-position .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: top;
+            white-space: nowrap;
+        }
+
+            .button:active,
+            .button:focus {
+                outline: none;
+            }
+
+            .button:hover {
+                background-position: -20px -20px;
+            }
+
+            .button:focus:not(:active) {
+                box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+            }
+
+
+
+
+
+
+        .center {
+            margin: 0 auto;
+            width: 60%;
+            padding: 10px;
+        }
+
+        #centers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #centers td, #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #centers tr:nth-child(even) {
+                background-color: #8db9a6
+            }
+
+            #centers tr:hover {
+                background-color: #3EB2FD;
+            }
+
+            #centers th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+            }
+
+        
+
+
+
+        #centers2 {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #centers2 td, #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #centers2 tr:nth-child(even) {
+                background-color: #8db9a6
+            }
+
+            #centers2 tr:hover {
+                background-color: #3EB2FD;
+            }
+
+            #centers2 th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+            }
+
+
+
+        #centers3 td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #centers3 tr:nth-child(even) {
+            background-color: #8db9a6
+        }
+
+        #centers3 tr:hover {
+            background-color: #3EB2FD;
+        }
+
+        #centers3 th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+        }
+
+        #centers3 {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }      
+
+    </style>
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+
+            loadComments();
+
+            console.log(sessionStorage);
+            if (sessionStorage.length === 0)
+            {
+
+            }
+
+            else
+            {
+                var ulogovanKorisnik = JSON.parse(sessionStorage["ulogovanKorisnik"]);
+                console.log(ulogovanKorisnik);
+            }
+            var fitnesCentar = JSON.parse(localStorage["centar"]);
+
+
+            $("#treninziDiv").on('click', '.button', function () {
+                var nazivTreninga = $(this).closest("tr").find("td:first-child").text();
+                console.log(nazivTreninga);
+                if (sessionStorage.length !== 0) {
+
+                    $.get("/api/GrupniTrening", function (data, status) {
+
+                        console.log(ulogovanKorisnik);
+                        for (trening in data)
+                        {
+                            if (nazivTreninga === data[trening].Naziv)
+                            {
+                                if (data[trening].Posetioci.length > data[trening].MaxBrojPosetilaca)
+                                {
+                                    alert("Dostignut je max broj posetilaca, ne mozete se prijaviti za ovaj trening");
+                                    break;
+                                }
+                                if (ulogovanKorisnik.PrijavljeniTreninziId.includes(data[trening].Id) === false) {
+                                    ulogovanKorisnik.PrijavljeniTreninziId.push(data[trening].Id);
+                                    $.ajax({
+                                        url: '/api/Korisnik',
+                                        type: 'PUT',
+                                        dataType: 'json',
+                                        data: ulogovanKorisnik,
+                                        success: function (data, textStatus, xhr) {
+                                            console.log(data);
+                                            sessionStorage["ulogovanKorisnik"] = JSON.stringify(data);
+                                            alert("Uspesno ste se prijavili na trening");                                            
+                                            location.reload();
+                                        },
+                                        error: function (xhr, textStatus, errorThrown) {
+                                            console.log('Error in Operation');
+                                        }
+                                    });
+                                }
+
+
+                                else {
+                                    alert("Vec ste se prijavili za ovaj trening!");
+                                    break;
+                                }
+                            }
+                        }
+                    
+                    });
+                }
+
+
+            });
+
+            $("#home").click(function () {
+                location.href = "index.html";
+            });
+
+            $("#home").hover(function () {
+                $("#home").css('color', 'white');
+            });
+
+            $("#home").mouseleave(function () {
+                $("#home").css('color', '#000000');
+            });
+
+                        
+            console.log(localStorage);
+            console.log(fitnesCentar);
+
+            var table = '<table id="centers" border="1" style="margin-left:auto; margin-right:auto; "><tr><th colspan="2" style="text-align:center">' + fitnesCentar.Naziv + '</th></tr>';
+            table += '<tr><td>Vlasnik:</td><td>' + fitnesCentar.Vlasnik.Ime + " " + fitnesCentar.Vlasnik.Prezime + '</td></tr>';
+            table += '<tr><td>Adresa:</td><td>' + fitnesCentar.Adresa + '</td></tr>';
+            table += '<tr><td>Godina otvaranja:</td><td>' + fitnesCentar.GodinaOtvaranja + '</td></tr>';
+            table += '<tr><td>Mesecna clanarina(din):</td><td>' + fitnesCentar.MesecnaClanarina + '</td></tr>';
+            table += '<tr><td>Godisnja clanarina(din):</td><td>' + fitnesCentar.GodisnjaClanarina + '</td></tr>';
+            table += '<tr><td>Cena treninga(din):</td><td>' + fitnesCentar.CenaJednogTreninga + '</td></tr>';
+            table += '<tr><td>Cena grupnog treninga(din):</td><td>' + fitnesCentar.CenaJednogGrupnogTreninga + '</td></tr>';
+            table += '<tr><td>Cena treninga sa personalnim trenerom(din):</td><td>' + fitnesCentar.CenaJednogTreningaSaPersonalnimTrenerom + '</td></tr>';
+            
+
+
+
+
+            
+            table += '</table>'; 
+            $("#detailsDiv").html(table);
+
+            $.get("/api/GrupniTrening", function (data, status) {
+
+                var treninzi = '<table id="centers2" border="1" style="margin-left:auto; margin-right:auto; "><tr><th colspan="7" style="text-align:center">Treninzi</th></tr>';
+                treninzi += '<tr><th>Naziv</th><th>Tip treninga</th><th>Trajanje treninga(min)</th><th>Vreme odrzavanja</th><th>Max broj posetilaca</th><th>Trenutni broj posetilaca</th><th></th></tr>'
+                for (item in data) {
+                    if (fitnesCentar.Naziv === data[item].Centar.Naziv)
+                    {
+                        console.log(data[item].Naziv);
+                        let datum = new Date(data[item].DatumIVremeTreninga);
+                        let datumString = datum.toString();
+                        let datumSplit = datumString.split(" ");
+                        console.log(datumString);
+                        if (datum > Date.now())
+                        {
+                            let trening = '<td>' + data[item].Naziv + '</td>';
+                            trening += '<td>' + data[item].TipTreninga + '</td>';
+                            trening += '<td>' + data[item].TrajanjeTreninga + '</td>';
+                            trening += '<td>' + datumSplit[2] + '/' + datumSplit[1] + '/' + datum.getFullYear() + ' ' + datum.getHours() + ':' + datum.getMinutes() + 'H' + '</td>';
+                            trening += '<td>' + data[item].MaxBrojPosetilaca + '</td>';
+                            trening += '<td>' + data[item].Posetioci.length + '</td>';
+
+                            if (sessionStorage.length !== 0)
+                            {
+                                if (ulogovanKorisnik.Uloga === 0)
+                                {
+                                    trening += '<td><button class="button">Prijavi se</button></td>';
+                                }
+                            }
+
+                            treninzi += '<tr>' + trening + '</tr>';
+                        }
+
+
+                    }
+                }
+
+                treninzi += '</table>'
+
+                if (sessionStorage.length !== 0) {
+                    if (ulogovanKorisnik.Uloga === 0) {
+                        $.get("/api/GrupniTrening", function (data, status) {
+
+                            for (item in data)
+                            {
+                                if (data[item].Centar.Naziv === fitnesCentar.Naziv)
+                                {
+                                    console.log("Usao u if za trening i centar");
+                                    if (ulogovanKorisnik.PrijavljeniTreninziId.includes(data[item].Id))
+                                    {
+                                        console.log("Usao u drugi if za trening i centar");
+                                        let komentarInput = '<input required style="height:40px; width:300px" type="text" name="komentar" id="komentar" placeholder="komentar" />';
+                                        komentarInput += '<input required style="height:40px; width:40px" type="number" name="ocena" id="ocena" placeholder="ocena" />';
+                                        komentarInput += '<input type="submit" class="button" name="ostaviKomentar" id="ostaviKomentar" value="Ostavi komentar"/>';
+                                        $("#komentarInputDiv").html(komentarInput);
+                                        break;
+                                    }
+                                }
+                            }
+
+                            
+
+                        });
+
+                        
+                    }
+                }
+                $("#treninziDiv").html(treninzi);
+
+            });
+
+            function loadComments() {
+
+                $.get("/api/Komentar", function (data, status) {
+                    var komentari = '<table id="centers3" border="1" style="margin-left:auto; margin-right:auto; "><tr><th colspan="3" style="text-align:center">Komentari</th></tr>';
+                    komentari += '<tr><th>Autor</th><th>Komentar</th><th>Ocena</th></tr>'
+
+                    for (item in data) {
+                        if (data[item].FitnesCentar.Naziv === fitnesCentar.Naziv) {
+                            let komentar = '<td>' + data[item].Posetilac.KorisnickoIme + '</td>';
+                            komentar += '<td>' + data[item].TextKomentara + '</td>';
+                            komentar += '<td>' + data[item].Ocena + '</td>';
+                            komentari += '<tr>' + komentar + '</tr>';
+
+                        }
+                    }
+                    komentari += '</table>';
+                    $("#komentariDiv").html(komentari);
+                });
+            }  
+            $("#komentarInputDiv").on('click', '#ostaviKomentar', function () {
+
+                var tekstKomentara = $("#komentar").val();
+                var ocena = $("#ocena").val();
+                var centar = fitnesCentar;
+                var posetilac = ulogovanKorisnik;
+
+                console.log(tekstKomentara);
+
+                if (tekstKomentara === '')
+                {
+                    alert("Tekst komentara je obavezan");
+                }
+
+                if (ocena < 1 || ocena > 5)
+                {
+                    alert("Ocena mora biti u opsegu od 1 do 5!");
+                    return;
+                }
+
+                $.post('/api/Komentar', { 'Posetilac': posetilac, 'FitnesCentar': centar, 'TextKomentara': tekstKomentara,'Ocena' :ocena },
+                    function (result) {
+                        alert('Komentar je postavljen!');
+                        console.log(result);
+                        $("#komentar").val('');
+                        $("#ocena").val('');
+                        loadComments();
+                    }
+                ).fail(function (xhr, ajaxOptions, thrownError) {
+                    alert('Error: ' + xhr.status);
+                });
+            
+            });
+
+
+        });
+    </script>
+</head>
+<body style="background-color:#8db9a6">
+<div align="left">
+    <h1 id="home" style="color:#000000;font-family:'Times New Roman', Times, serif;cursor:pointer">HOME</h1>
+</div>
+ <hr />
+
+<div  class="center" id="detailsDiv">
+
+</div>
+<div class="center" id="treninziDiv">
+
+</div>
+<div class="center" id="komentariDiv">
+
+</div>
+<div class="center" id="komentarInputDiv">
+
+</div>
+
+</body>
+</html>

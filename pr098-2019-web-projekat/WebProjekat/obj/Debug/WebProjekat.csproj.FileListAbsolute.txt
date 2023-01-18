@@ -1,0 +1,164 @@
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\WebProjekat.dll.config
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\WebProjekat.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\WebProjekat.pdb
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\csc.exe
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\csc.exe.config
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\csc.rsp
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\csi.exe
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\csi.exe.config
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\csi.rsp
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.AppContext.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Console.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.IO.Compression.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.IO.Pipes.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Security.Claims.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.ValueTuple.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Xml.XPath.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\vbc.exe
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\vbc.exe.config
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\vbc.rsp
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\VBCSCompiler.exe
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\Antlr3.Runtime.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\Newtonsoft.Json.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\System.Net.Http.Formatting.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Helpers.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Http.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Http.WebHost.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Mvc.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Optimization.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Razor.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\System.Web.WebPages.Deployment.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\System.Web.WebPages.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\System.Web.WebPages.Razor.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\WebGrease.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\Newtonsoft.Json.xml
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\System.Net.Http.Formatting.xml
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Helpers.xml
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Http.xml
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Http.WebHost.xml
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Mvc.xml
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Optimization.xml
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Razor.xml
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\System.Web.WebPages.xml
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\System.Web.WebPages.Deployment.xml
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\System.Web.WebPages.Razor.xml
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\Antlr3.Runtime.pdb
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\obj\Debug\WebProjekat.csprojAssemblyReference.cache
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\obj\Debug\WebProjekat.csproj.CoreCompileInputs.cache
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\obj\Debug\WebProjekat.csproj.CopyComplete
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\obj\Debug\WebProjekat.dll
+C:\Users\milov\OneDrive\Desktop\WebGitLabRepo\pr098-2019-web-projekat\WebProjekat\obj\Debug\WebProjekat.pdb
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\WebProjekat.dll.config
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\WebProjekat.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\WebProjekat.pdb
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\csc.exe
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\csc.exe.config
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\csc.rsp
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\csi.exe
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\csi.exe.config
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\csi.rsp
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.AppContext.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Console.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.IO.Compression.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Security.Claims.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.ValueTuple.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\vbc.exe
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\vbc.exe.config
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\vbc.rsp
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\VBCSCompiler.exe
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\Antlr3.Runtime.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\Newtonsoft.Json.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\System.Net.Http.Formatting.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Helpers.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Http.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Http.WebHost.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Mvc.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Optimization.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Razor.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\System.Web.WebPages.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\System.Web.WebPages.Razor.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\WebGrease.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\Newtonsoft.Json.xml
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\System.Net.Http.Formatting.xml
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Helpers.xml
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Http.xml
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Http.WebHost.xml
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Mvc.xml
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Optimization.xml
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\System.Web.Razor.xml
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\System.Web.WebPages.xml
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\System.Web.WebPages.Razor.xml
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\Antlr3.Runtime.pdb
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\obj\Debug\WebProjekat.csproj.AssemblyReference.cache
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\obj\Debug\WebProjekat.csproj.CoreCompileInputs.cache
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\obj\Debug\WebProjekat.csproj.CopyComplete
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\obj\Debug\WebProjekat.dll
+C:\Users\Korisnik\Desktop\Projekat Web\pr098-2019-web-projekat\WebProjekat\obj\Debug\WebProjekat.pdb

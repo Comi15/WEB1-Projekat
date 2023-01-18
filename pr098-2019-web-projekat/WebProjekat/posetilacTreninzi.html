@@ -1,0 +1,886 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <style>
+
+
+
+        .center {
+            margin: 0 auto;
+            width: 60%;
+            padding: 10px;
+        }
+
+
+
+
+        .button {
+            align-items: center;
+            background-color: #3EB2FD;
+            background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+            background-size: calc(100% + 20px) calc(100% + 20px);
+            border-radius: 100px;
+            border-width: 0;
+            box-shadow: none;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: CircularStd,sans-serif;
+            font-size: 1rem;
+            height: auto;
+            justify-content: center;
+            line-height: 1.5;
+            padding: 6px 20px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color .2s,background-position .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: top;
+            white-space: nowrap;
+        }
+
+            .button:active,
+            .button:focus {
+                outline: none;
+            }
+
+            .button:hover {
+                background-position: -20px -20px;
+            }
+
+            .button:focus:not(:active) {
+                box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+            }
+
+
+        #centers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #centers td, #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #centers tr:nth-child(even) {
+                background-color: #8db9a6
+            }
+
+            #centers tr:hover {
+                background-color: #3EB2FD;
+            }
+
+            #centers th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+            }
+
+
+        #sortTable {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #sortTable td, #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #sortTable tr:nth-child(even) {
+                background-color: #8db9a6
+            }
+
+            #sortTable tr:hover {
+                background-color: #3EB2FD;
+            }
+
+            #sortTable th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+            }
+
+
+        #sortTable {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #pretragaTable td, #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #pretragaTable tr:nth-child(even) {
+                background-color: #8db9a6
+            }
+
+            #pretragaTable tr:hover {
+                background-color: #3EB2FD;
+            }
+
+            #pretragaTable th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+            }
+
+
+
+
+
+        select {
+            /* styling */
+            background-color: white;
+            border: thin solid blue;
+            border-radius: 4px;
+            display: inline-block;
+            font: inherit;
+            line-height: 1.5em;
+            padding: 0.5em 3.5em 0.5em 1em;
+            /* reset */
+            margin: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+            select.round {
+                background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), radial-gradient(#ddd 70%, transparent 72%);
+                background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - .5em) .5em;
+                background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
+                background-repeat: no-repeat;
+            }
+
+                select.round:focus {
+                    background-image: linear-gradient(45deg, white 50%, transparent 50%), linear-gradient(135deg, transparent 50%, white 50%), radial-gradient(gray 70%, transparent 72%);
+                    background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - .5em) .5em;
+                    background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
+                    background-repeat: no-repeat;
+                    border-color: green;
+                    outline: 0;
+                }
+
+    </style>
+
+
+<script src="Scripts/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+
+        
+        var ulogovanKorisnik = JSON.parse(sessionStorage["ulogovanKorisnik"]);
+        console.log(ulogovanKorisnik);
+
+        getTreninzi();
+        $("#home").click(function () {
+            location.href = "index.html";
+        });
+
+        $("#home").hover(function () {
+            $("#home").css('color', 'white');
+        });
+
+        $("#home").mouseleave(function () {
+            $("#home").css('color', '#000000');
+        });
+
+
+        
+        
+
+
+
+
+
+        function getTreninzi() {
+            $.get("/api/GrupniTrening", function (data, status) {
+
+                var treninzi = '<table id="centers" border="1" style="margin-left:auto; margin-right:auto; "><tr><th colspan="7" style="text-align:center">Treninzi</th></tr>';
+                treninzi += '<tr><th>Naziv</th><th>Tip treninga</th><th>Trajanje treninga(min)</th><th>Vreme odrzavanja</th><th>Max broj posetilaca</th><th>Fitnes centar</th><th></th></tr>'
+
+                var podaci = data;
+                var ids = ulogovanKorisnik.PrijavljeniTreninziId;
+                for (item in podaci) {
+
+
+                    for (r in ids) {
+                        {
+                            if (podaci[item].Id === ids[r]) {
+
+                                var datum = new Date(podaci[item].DatumIVremeTreninga);
+                                var datumString = datum.toString();
+                                var datumSplit = datumString.split(" ");
+                                console.log("Usao u ovaj if");
+                                if (datum < Date.now()) {
+                                    console.log("usao u ovaj if");
+
+
+                                    let trening = '<td>' + podaci[item].Naziv + '</td>';
+                                    trening += '<td>' + podaci[item].TipTreninga + '</td>';
+                                    trening += '<td>' + podaci[item].TrajanjeTreninga + '</td>';
+                                    trening += '<td>' + datumSplit[2] + '/' + datumSplit[1] + '/' + datum.getFullYear() + ' ' + datum.getHours() + ':' + datum.getMinutes() + 'H' + '</td>';
+                                    trening += '<td>' + podaci[item].MaxBrojPosetilaca + '</td>';
+                                    trening += '<td>' + podaci[item].Centar.Naziv + '</td>';
+                                    treninzi += '<tr>' + trening + '</tr>';
+
+                                }
+                            }
+                        }
+                    }
+                }
+                treninzi += '</table>'
+                $("#treninziDiv").html(treninzi);
+
+            });
+        }
+
+
+        $("#sortButton").click(function () {
+
+            $.get("/api/GrupniTrening", function (data, status) {
+
+                var podaci = data;
+                var ids = ulogovanKorisnik.PrijavljeniTreninziId;
+
+                var kriterijum = $('#kriterijum').find(":selected").text();
+                var tipSorta = $('#tipSorta').find(":selected").text();
+
+                if (kriterijum == 'Naziv' && tipSorta == 'Rastuce') {
+                    console.log("Usao u if1");
+                    podaci.sort(function (x, y) {
+                        let a = x.Naziv.toUpperCase(),
+                            b = y.Naziv.toUpperCase();
+                        return a == b ? 0 : a > b ? 1 : -1;
+                    });
+                    let treninzi = '<table id="centers" border="1" style="margin-left:auto; margin-right:auto; "><tr><th colspan="7" style="text-align:center">Treninzi</th></tr>';
+                    treninzi += '<tr><th>Naziv</th><th>Tip treninga</th><th>Trajanje treninga(min)</th><th>Vreme odrzavanja</th><th>Max broj posetilaca</th><th>Fitnes centar</th><th></th></tr>'
+                    for (item in podaci) {
+                        for (r in ids) {
+                            {
+                                if (podaci[item].Id === ids[r]) {
+
+                                    var datum = new Date(podaci[item].DatumIVremeTreninga);
+                                    var datumString = datum.toString();
+                                    var datumSplit = datumString.split(" ");
+                                    console.log("Usao u ovaj if");
+                                    if (datum < Date.now()) {
+                                        console.log("usao u ovaj if");
+
+
+                                        let trening = '<td>' + podaci[item].Naziv + '</td>';
+                                        trening += '<td>' + podaci[item].TipTreninga + '</td>';
+                                        trening += '<td>' + podaci[item].TrajanjeTreninga + '</td>';
+                                        trening += '<td>' + datumSplit[2] + '/' + datumSplit[1] + '/' + datum.getFullYear() + ' ' + datum.getHours() + ':' + datum.getMinutes() + 'H' + '</td>';
+                                        trening += '<td>' + podaci[item].MaxBrojPosetilaca + '</td>';
+                                        trening += '<td>' + podaci[item].Centar.Naziv + '</td>';
+                                        treninzi += '<tr>' + trening + '</tr>';
+
+                                    }
+                                }
+                            }
+
+
+                        }
+                    }
+                    treninzi += '</table>'
+                    $("#treninziDiv").html(treninzi);
+                    
+                }
+
+
+                else if (kriterijum == "Naziv" && tipSorta == "Opadajuce") {
+                    console.log("Usao u if2");
+                    podaci.sort((a, b) => {
+                        if (a.Naziv > b.Naziv)
+                            return -1;
+                        if (a.Naziv < b.Naziv)
+                            return 1;
+                        return 0;
+                    });
+
+                    let treninzi = '<table id="centers" border="1" style="margin-left:auto; margin-right:auto; "><tr><th colspan="7" style="text-align:center">Treninzi</th></tr>';
+                    treninzi += '<tr><th>Naziv</th><th>Tip treninga</th><th>Trajanje treninga(min)</th><th>Vreme odrzavanja</th><th>Max broj posetilaca</th><th>Fitnes centar</th><th></th></tr>'
+                    for (item in podaci) {
+
+
+                        for (r in ids) {
+                            {
+                                if (podaci[item].Id === ids[r]) {
+
+                                    var datum = new Date(podaci[item].DatumIVremeTreninga);
+                                    var datumString = datum.toString();
+                                    var datumSplit = datumString.split(" ");
+                                    console.log("Usao u ovaj if");
+                                    if (datum < Date.now()) {
+                                        console.log("usao u ovaj if");
+
+
+                                        let trening = '<td>' + podaci[item].Naziv + '</td>';
+                                        trening += '<td>' + podaci[item].TipTreninga + '</td>';
+                                        trening += '<td>' + podaci[item].TrajanjeTreninga + '</td>';
+                                        trening += '<td>' + datumSplit[2] + '/' + datumSplit[1] + '/' + datum.getFullYear() + ' ' + datum.getHours() + ':' + datum.getMinutes() + 'H' + '</td>';
+                                        trening += '<td>' + podaci[item].MaxBrojPosetilaca + '</td>';
+                                        trening += '<td>' + podaci[item].Centar.Naziv + '</td>';
+                                        treninzi += '<tr>' + trening + '</tr>';
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    treninzi += '</table>'
+                    $("#treninziDiv").html(treninzi);
+
+                }
+
+                else if (kriterijum == "Tip treninga" && tipSorta == "Opadajuce") {
+                    console.log("Usao u if2");
+                    podaci.sort((a, b) => {
+                        if (a.TipTreninga > b.TipTreninga)
+                            return -1;
+                        if (a.TipTreninga < b.TipTreninga)
+                            return 1;
+                        return 0;
+                    });
+
+                    let treninzi = '<table id="centers" border="1" style="margin-left:auto; margin-right:auto; "><tr><th colspan="7" style="text-align:center">Treninzi</th></tr>';
+                    treninzi += '<tr><th>Naziv</th><th>Tip treninga</th><th>Trajanje treninga(min)</th><th>Vreme odrzavanja</th><th>Max broj posetilaca</th><th>Fitnes centar</th><th></th></tr>'
+                    for (item in podaci) {
+
+
+                        for (r in ids) {
+                            {
+                                if (podaci[item].Id === ids[r]) {
+
+                                    var datum = new Date(podaci[item].DatumIVremeTreninga);
+                                    var datumString = datum.toString();
+                                    var datumSplit = datumString.split(" ");
+                                    console.log("Usao u ovaj if");
+                                    if (datum < Date.now()) {
+                                        console.log("usao u ovaj if");
+
+
+                                        let trening = '<td>' + podaci[item].Naziv + '</td>';
+                                        trening += '<td>' + podaci[item].TipTreninga + '</td>';
+                                        trening += '<td>' + podaci[item].TrajanjeTreninga + '</td>';
+                                        trening += '<td>' + datumSplit[2] + '/' + datumSplit[1] + '/' + datum.getFullYear() + ' ' + datum.getHours() + ':' + datum.getMinutes() + 'H' + '</td>';
+                                        trening += '<td>' + podaci[item].MaxBrojPosetilaca + '</td>';
+                                        trening += '<td>' + podaci[item].Centar.Naziv + '</td>';
+                                        treninzi += '<tr>' + trening + '</tr>';
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    treninzi += '</table>'
+                    $("#treninziDiv").html(treninzi);
+
+                }
+
+
+                else if (kriterijum == 'Tip treninga' && tipSorta == 'Rastuce') {
+                    console.log("Usao u if1");
+                    podaci.sort(function (x, y) {
+                        let a = x.TipTreninga.toUpperCase(),
+                            b = y.TipTreninga.toUpperCase();
+                        return a == b ? 0 : a > b ? 1 : -1;
+                    });
+                    let treninzi = '<table id="centers" border="1" style="margin-left:auto; margin-right:auto; "><tr><th colspan="7" style="text-align:center">Treninzi</th></tr>';
+                    treninzi += '<tr><th>Naziv</th><th>Tip treninga</th><th>Trajanje treninga(min)</th><th>Vreme odrzavanja</th><th>Max broj posetilaca</th><th>Fitnes centar</th><th></th></tr>'
+                    for (item in podaci) {
+                        for (r in ids) {
+                            {
+                                if (podaci[item].Id === ids[r]) {
+
+                                    var datum = new Date(podaci[item].DatumIVremeTreninga);
+                                    var datumString = datum.toString();
+                                    var datumSplit = datumString.split(" ");
+                                    console.log("Usao u ovaj if");
+                                    if (datum < Date.now()) {
+                                        console.log("usao u ovaj if");
+
+
+                                        let trening = '<td>' + podaci[item].Naziv + '</td>';
+                                        trening += '<td>' + podaci[item].TipTreninga + '</td>';
+                                        trening += '<td>' + podaci[item].TrajanjeTreninga + '</td>';
+                                        trening += '<td>' + datumSplit[2] + '/' + datumSplit[1] + '/' + datum.getFullYear() + ' ' + datum.getHours() + ':' + datum.getMinutes() + 'H' + '</td>';
+                                        trening += '<td>' + podaci[item].MaxBrojPosetilaca + '</td>';
+                                        trening += '<td>' + podaci[item].Centar.Naziv + '</td>';
+                                        treninzi += '<tr>' + trening + '</tr>';
+
+                                    }
+                                }
+                            }
+
+
+                        }
+                    }
+                    treninzi += '</table>'
+                    $("#treninziDiv").html(treninzi);
+
+                }
+
+                else if (kriterijum == 'Vreme odrzavanja' && tipSorta == 'Rastuce') {
+                    console.log("Usao u if1");
+                    podaci.sort(function (x, y) {
+                        let a = new Date(x.DatumIVremeTreninga),
+                            b = new Date(y.DatumIVremeTreninga);
+                        return a - b;
+                    });
+                    let treninzi = '<table id="centers" border="1" style="margin-left:auto; margin-right:auto; "><tr><th colspan="7" style="text-align:center">Treninzi</th></tr>';
+                    treninzi += '<tr><th>Naziv</th><th>Tip treninga</th><th>Trajanje treninga(min)</th><th>Vreme odrzavanja</th><th>Max broj posetilaca</th><th>Fitnes centar</th><th></th></tr>'
+                    for (item in podaci) {
+                        for (r in ids) {
+                            {
+                                if (podaci[item].Id === ids[r]) {
+
+                                    var datum = new Date(podaci[item].DatumIVremeTreninga);
+                                    var datumString = datum.toString();
+                                    var datumSplit = datumString.split(" ");
+                                    console.log("Usao u ovaj if");
+                                    if (datum < Date.now()) {
+                                        console.log("usao u ovaj if");
+
+
+                                        let trening = '<td>' + podaci[item].Naziv + '</td>';
+                                        trening += '<td>' + podaci[item].TipTreninga + '</td>';
+                                        trening += '<td>' + podaci[item].TrajanjeTreninga + '</td>';
+                                        trening += '<td>' + datumSplit[2] + '/' + datumSplit[1] + '/' + datum.getFullYear() + ' ' + datum.getHours() + ':' + datum.getMinutes() + 'H' + '</td>';
+                                        trening += '<td>' + podaci[item].MaxBrojPosetilaca + '</td>';
+                                        trening += '<td>' + podaci[item].Centar.Naziv + '</td>';
+                                        treninzi += '<tr>' + trening + '</tr>';
+
+                                    }
+                                }
+                            }
+
+
+                        }
+                    }
+                    treninzi += '</table>'
+                    $("#treninziDiv").html(treninzi);
+
+                }
+
+
+                else if (kriterijum == 'Vreme odrzavanja' && tipSorta == 'Opadajuce') {
+                    console.log("Usao u if1");
+                    podaci.sort(function (x, y) {
+                        let a = new Date(x.DatumIVremeTreninga),
+                            b = new Date(y.DatumIVremeTreninga);
+                        return b - a;
+                    });
+                    let treninzi = '<table id="centers" border="1" style="margin-left:auto; margin-right:auto; "><tr><th colspan="7" style="text-align:center">Treninzi</th></tr>';
+                    treninzi += '<tr><th>Naziv</th><th>Tip treninga</th><th>Trajanje treninga(min)</th><th>Vreme odrzavanja</th><th>Max broj posetilaca</th><th>Fitnes centar</th><th></th></tr>'
+                    for (item in podaci) {
+                        for (r in ids) {
+                            {
+                                if (podaci[item].Id === ids[r]) {
+
+                                    var datum = new Date(podaci[item].DatumIVremeTreninga);
+                                    var datumString = datum.toString();
+                                    var datumSplit = datumString.split(" ");
+                                    console.log("Usao u ovaj if");
+                                    if (datum < Date.now()) {
+                                        console.log("usao u ovaj if");
+
+
+                                        let trening = '<td>' + podaci[item].Naziv + '</td>';
+                                        trening += '<td>' + podaci[item].TipTreninga + '</td>';
+                                        trening += '<td>' + podaci[item].TrajanjeTreninga + '</td>';
+                                        trening += '<td>' + datumSplit[2] + '/' + datumSplit[1] + '/' + datum.getFullYear() + ' ' + datum.getHours() + ':' + datum.getMinutes() + 'H' + '</td>';
+                                        trening += '<td>' + podaci[item].MaxBrojPosetilaca + '</td>';
+                                        trening += '<td>' + podaci[item].Centar.Naziv + '</td>';
+                                        treninzi += '<tr>' + trening + '</tr>';
+
+                                    }
+                                }
+                            }
+
+
+                        }
+                    }
+                    treninzi += '</table>'
+                    $("#treninziDiv").html(treninzi);
+
+                }
+
+            });
+        });
+
+
+        $("#searchButton").click(function () {
+            $.get("/api/GrupniTrening", function (data, status) {
+                var pretragaNaziv = $("#pretragaNaziv").val();
+                var pretragaTipTreninga = $("#pretragaTipTreninga").val();
+                var pretragaFitnesCentar = $("#pretragaFitnesCentar").val();
+
+                var podaci = data;
+                var ids = ulogovanKorisnik.PrijavljeniTreninziId;
+                let treninzi = '<table id="centers" border="1" style="margin-left:auto; margin-right:auto; "><tr><th colspan="7" style="text-align:center">Treninzi</th></tr>';
+                treninzi += '<tr><th>Naziv</th><th>Tip treninga</th><th>Trajanje treninga(min)</th><th>Vreme odrzavanja</th><th>Max broj posetilaca</th><th>Fitnes centar</th><th></th></tr>'
+
+                for (item in podaci) {
+
+                    if (pretragaNaziv === podaci[item].Naziv && pretragaTipTreninga.length === 0 && pretragaFitnesCentar.length === 0) {
+                        console.log("Usao u if za pretragu");
+                        for (r in ids) {
+                            {
+                                if (podaci[item].Id === ids[r]) {
+
+                                    var datum = new Date(podaci[item].DatumIVremeTreninga);
+                                    var datumString = datum.toString();
+                                    var datumSplit = datumString.split(" ");
+                                    console.log("Usao u ovaj if");
+                                    if (datum < Date.now()) {
+                                        console.log("usao u ovaj if");
+
+
+                                        let trening = '<td>' + podaci[item].Naziv + '</td>';
+                                        trening += '<td>' + podaci[item].TipTreninga + '</td>';
+                                        trening += '<td>' + podaci[item].TrajanjeTreninga + '</td>';
+                                        trening += '<td>' + datumSplit[2] + '/' + datumSplit[1] + '/' + datum.getFullYear() + ' ' + datum.getHours() + ':' + datum.getMinutes() + 'H' + '</td>';
+                                        trening += '<td>' + podaci[item].MaxBrojPosetilaca + '</td>';
+                                        trening += '<td>' + podaci[item].Centar.Naziv + '</td>';
+                                        treninzi += '<tr>' + trening + '</tr>';
+                                        break;
+
+                                    }
+                                }
+                            }
+
+
+                        }
+
+                    }
+
+
+                    else if (pretragaNaziv.length === 0 && pretragaTipTreninga.length === 0 && pretragaFitnesCentar.length === 0) {
+                        console.log("Usao u if za pretragu");
+                        for (r in ids) {
+                            {
+                                if (podaci[item].Id === ids[r]) {
+
+                                    var datum = new Date(podaci[item].DatumIVremeTreninga);
+                                    var datumString = datum.toString();
+                                    var datumSplit = datumString.split(" ");
+                                    console.log("Usao u ovaj if");
+                                    if (datum < Date.now()) {
+                                        console.log("usao u ovaj if");
+
+
+                                        let trening = '<td>' + podaci[item].Naziv + '</td>';
+                                        trening += '<td>' + podaci[item].TipTreninga + '</td>';
+                                        trening += '<td>' + podaci[item].TrajanjeTreninga + '</td>';
+                                        trening += '<td>' + datumSplit[2] + '/' + datumSplit[1] + '/' + datum.getFullYear() + ' ' + datum.getHours() + ':' + datum.getMinutes() + 'H' + '</td>';
+                                        trening += '<td>' + podaci[item].MaxBrojPosetilaca + '</td>';
+                                        trening += '<td>' + podaci[item].Centar.Naziv + '</td>';
+                                        treninzi += '<tr>' + trening + '</tr>';
+                                        break;
+
+                                    }
+                                }
+                            }
+
+
+                        }
+
+                    }
+
+
+
+                    else if (pretragaNaziv.length === 0 && pretragaTipTreninga === podaci[item].TipTreninga && pretragaFitnesCentar.length === 0) {
+                        console.log("Usao u if za pretragu");
+                        for (r in ids) {
+                            {
+                                if (podaci[item].Id === ids[r]) {
+
+                                    var datum = new Date(podaci[item].DatumIVremeTreninga);
+                                    var datumString = datum.toString();
+                                    var datumSplit = datumString.split(" ");
+                                    console.log("Usao u ovaj if");
+                                    if (datum < Date.now()) {
+                                        console.log("usao u ovaj if");
+
+
+                                        let trening = '<td>' + podaci[item].Naziv + '</td>';
+                                        trening += '<td>' + podaci[item].TipTreninga + '</td>';
+                                        trening += '<td>' + podaci[item].TrajanjeTreninga + '</td>';
+                                        trening += '<td>' + datumSplit[2] + '/' + datumSplit[1] + '/' + datum.getFullYear() + ' ' + datum.getHours() + ':' + datum.getMinutes() + 'H' + '</td>';
+                                        trening += '<td>' + podaci[item].MaxBrojPosetilaca + '</td>';
+                                        trening += '<td>' + podaci[item].Centar.Naziv + '</td>';
+                                        treninzi += '<tr>' + trening + '</tr>';
+                                        break;
+
+                                    }
+                                }
+                            }
+
+
+                        }
+
+                    }
+
+
+                    else if (pretragaNaziv.length === 0 && pretragaTipTreninga.length === 0 && pretragaFitnesCentar === podaci[item].Centar.Naziv) {
+                        console.log("Usao u if za pretragu");
+                        for (r in ids) {
+                            {
+                                if (podaci[item].Id === ids[r]) {
+
+                                    var datum = new Date(podaci[item].DatumIVremeTreninga);
+                                    var datumString = datum.toString();
+                                    var datumSplit = datumString.split(" ");
+                                    console.log("Usao u ovaj if");
+                                    if (datum < Date.now()) {
+                                        console.log("usao u ovaj if");
+
+
+                                        let trening = '<td>' + podaci[item].Naziv + '</td>';
+                                        trening += '<td>' + podaci[item].TipTreninga + '</td>';
+                                        trening += '<td>' + podaci[item].TrajanjeTreninga + '</td>';
+                                        trening += '<td>' + datumSplit[2] + '/' + datumSplit[1] + '/' + datum.getFullYear() + ' ' + datum.getHours() + ':' + datum.getMinutes() + 'H' + '</td>';
+                                        trening += '<td>' + podaci[item].MaxBrojPosetilaca + '</td>';
+                                        trening += '<td>' + podaci[item].Centar.Naziv + '</td>';
+                                        treninzi += '<tr>' + trening + '</tr>';
+                                        break;
+
+                                    }
+                                }
+                            }
+
+
+                        }
+
+                    }
+
+
+                    else if (pretragaNaziv === podaci[item].Naziv && pretragaTipTreninga === podaci[item].TipTreninga && pretragaFitnesCentar.length === 0) {
+                        console.log("Usao u if za pretragu");
+                        for (r in ids) {
+                            {
+                                if (podaci[item].Id === ids[r]) {
+
+                                    var datum = new Date(podaci[item].DatumIVremeTreninga);
+                                    var datumString = datum.toString();
+                                    var datumSplit = datumString.split(" ");
+                                    console.log("Usao u ovaj if");
+                                    if (datum < Date.now()) {
+                                        console.log("usao u ovaj if");
+
+
+                                        let trening = '<td>' + podaci[item].Naziv + '</td>';
+                                        trening += '<td>' + podaci[item].TipTreninga + '</td>';
+                                        trening += '<td>' + podaci[item].TrajanjeTreninga + '</td>';
+                                        trening += '<td>' + datumSplit[2] + '/' + datumSplit[1] + '/' + datum.getFullYear() + ' ' + datum.getHours() + ':' + datum.getMinutes() + 'H' + '</td>';
+                                        trening += '<td>' + podaci[item].MaxBrojPosetilaca + '</td>';
+                                        trening += '<td>' + podaci[item].Centar.Naziv + '</td>';
+                                        treninzi += '<tr>' + trening + '</tr>';
+                                        break;
+
+                                    }
+                                }
+                            }
+
+
+                        }
+
+                    }
+
+                    else if (pretragaNaziv === podaci[item].Naziv && pretragaTipTreninga.lenght === 0 && pretragaFitnesCentar === podaci[item].Centar.Naziv) {
+                        console.log("Usao u if za pretragu");
+                        for (r in ids) {
+                            {
+                                if (podaci[item].Id === ids[r]) {
+
+                                    var datum = new Date(podaci[item].DatumIVremeTreninga);
+                                    var datumString = datum.toString();
+                                    var datumSplit = datumString.split(" ");
+                                    console.log("Usao u ovaj if");
+                                    if (datum < Date.now()) {
+                                        console.log("usao u ovaj if");
+
+
+                                        let trening = '<td>' + podaci[item].Naziv + '</td>';
+                                        trening += '<td>' + podaci[item].TipTreninga + '</td>';
+                                        trening += '<td>' + podaci[item].TrajanjeTreninga + '</td>';
+                                        trening += '<td>' + datumSplit[2] + '/' + datumSplit[1] + '/' + datum.getFullYear() + ' ' + datum.getHours() + ':' + datum.getMinutes() + 'H' + '</td>';
+                                        trening += '<td>' + podaci[item].MaxBrojPosetilaca + '</td>';
+                                        trening += '<td>' + podaci[item].Centar.Naziv + '</td>';
+                                        treninzi += '<tr>' + trening + '</tr>';
+                                        break;
+
+                                    }
+                                }
+                            }
+
+
+                        }
+
+                    }
+
+
+                    else if (pretragaNaziv.length ===0 && pretragaTipTreninga === podaci[item].TipTreninga && pretragaFitnesCentar === podaci[item].Centar.Naziv) {
+                        console.log("Usao u if za pretragu");
+                        for (r in ids) {
+                            {
+                                if (podaci[item].Id === ids[r]) {
+
+                                    var datum = new Date(podaci[item].DatumIVremeTreninga);
+                                    var datumString = datum.toString();
+                                    var datumSplit = datumString.split(" ");
+                                    console.log("Usao u ovaj if");
+                                    if (datum < Date.now()) {
+                                        console.log("usao u ovaj if");
+
+
+                                        let trening = '<td>' + podaci[item].Naziv + '</td>';
+                                        trening += '<td>' + podaci[item].TipTreninga + '</td>';
+                                        trening += '<td>' + podaci[item].TrajanjeTreninga + '</td>';
+                                        trening += '<td>' + datumSplit[2] + '/' + datumSplit[1] + '/' + datum.getFullYear() + ' ' + datum.getHours() + ':' + datum.getMinutes() + 'H' + '</td>';
+                                        trening += '<td>' + podaci[item].MaxBrojPosetilaca + '</td>';
+                                        trening += '<td>' + podaci[item].Centar.Naziv + '</td>';
+                                        treninzi += '<tr>' + trening + '</tr>';
+                                        break;
+
+                                    }
+                                }
+                            }
+
+
+                        }
+
+                    }
+
+
+                    else if (pretragaNaziv === podaci[item].Naziv && pretragaTipTreninga === podaci[item].TipTreninga && pretragaFitnesCentar === podaci[item].Centar.Naziv) {
+                        console.log("Usao u if za pretragu");
+                        for (r in ids) {
+                            {
+                                if (podaci[item].Id === ids[r]) {
+
+                                    var datum = new Date(podaci[item].DatumIVremeTreninga);
+                                    var datumString = datum.toString();
+                                    var datumSplit = datumString.split(" ");
+                                    console.log("Usao u ovaj if");
+                                    if (datum < Date.now()) {
+                                        console.log("usao u ovaj if");
+
+
+                                        let trening = '<td>' + podaci[item].Naziv + '</td>';
+                                        trening += '<td>' + podaci[item].TipTreninga + '</td>';
+                                        trening += '<td>' + podaci[item].TrajanjeTreninga + '</td>';
+                                        trening += '<td>' + datumSplit[2] + '/' + datumSplit[1] + '/' + datum.getFullYear() + ' ' + datum.getHours() + ':' + datum.getMinutes() + 'H' + '</td>';
+                                        trening += '<td>' + podaci[item].MaxBrojPosetilaca + '</td>';
+                                        trening += '<td>' + podaci[item].Centar.Naziv + '</td>';
+                                        treninzi += '<tr>' + trening + '</tr>';
+                                        break;
+
+                                    }
+                                }
+                            }
+
+
+                        }
+
+                    }
+
+
+
+                }
+                treninzi += '</table>';
+                $("#treninziDiv").html(treninzi);
+
+            });     
+                     
+                    
+
+
+         });
+        
+
+    });
+</script>
+</head >
+<body style="background-color:#8db9a6">
+
+    <div align="left">
+        <h1 id="home" style="color:#000000;font-family:'Times New Roman', Times, serif;cursor:pointer">HOME</h1>
+    </div>
+    <hr />
+
+    <div class="center" id="pretragaDiv">
+        <table id="pretragaTable" border="1" style=margin-left:auto;margin-right:auto;>
+            <tr>
+                <td>
+                    <input type="text" name="naziv" id="pretragaNaziv" placeholder="Naziv" />
+                </td>
+                <td>
+                    <input type="text" name="tipTreninga" id="pretragaTipTreninga" placeholder="Tip treninga" />
+
+                </td>
+                <td>
+                    <input type="text" name="fitnesCentar" id="pretragaFitnesCentar" placeholder="Fitnes Centar" />
+
+                </td>
+                <td>
+                    <button class="button" id="searchButton">Pretrazi</button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div class="center" id="treninziDiv">
+
+    </div>
+
+
+    <div id="sortDiv" class="center">
+        <table id="sortTable" border="1" style=margin-left:auto;margin-right:auto;>
+            <tr>
+                <td>
+                    <select class="round" name="kriterijum" id="kriterijum">
+                        <option value="naziv">Naziv</option>
+                        <option value="tipTreninga">Tip treninga</option>
+                        <option value="vremeOdrzavanja">Vreme odrzavanja</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="round" name="tipSorta" id="tipSorta">
+                        <option value="rastuce">Rastuce</option>
+                        <option value="opadajuce">Opadajuce</option>
+                    </select>
+                </td>
+                <td>
+                    <button class="button" id="sortButton">Sortiraj</button>
+                </td>
+            </tr>
+        </table>
+
+
+    </div>
+
+</body>
+</html>

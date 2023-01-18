@@ -1,0 +1,877 @@
+[
+  {
+    "Trener": {
+      "DrziTreninge": [],
+      "AngazovanUFitnesCentru": {
+        "Id": 0,
+        "Naziv": null,
+        "Adresa": null,
+        "GodinaOtvaranja": 0,
+        "Vlasnik": {
+          "Id": 755317031,
+          "PrijavljeniTreninziId": [],
+          "FitnesCentriId": [],
+          "KorisnickoIme": null,
+          "Lozinka": null,
+          "Ime": null,
+          "Prezime": null,
+          "Pol": "\u0000",
+          "Email": null,
+          "DatumRodjenja": "0001-01-01T00:00:00",
+          "Uloga": 2
+        },
+        "MesecnaClanarina": 0,
+        "GodisnjaClanarina": 0,
+        "CenaJednogTreninga": 0,
+        "CenaJednogGrupnogTreninga": 0,
+        "CenaJednogTreningaSaPersonalnimTrenerom": 0
+      },
+      "PrijavljeniTreninziId": [],
+      "FitnesCentriId": [],
+      "Id": 0,
+      "KorisnickoIme": null,
+      "Lozinka": null,
+      "Ime": null,
+      "Prezime": null,
+      "Pol": "\u0000",
+      "Email": null,
+      "DatumRodjenja": "0001-01-01T00:00:00",
+      "Uloga": 1
+    },
+    "Id": 1234,
+    "Naziv": "Trening Yoga",
+    "TipTreninga": "Yoga",
+    "Centar": {
+      "Id": 0,
+      "Naziv": "Flex",
+      "Adresa": "Sutjeska 2,Novi Sad,21000",
+      "GodinaOtvaranja": 2010,
+      "Vlasnik": {
+        "Id": 0,
+        "PrijavljeniTreninziId": [],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "Comi15",
+        "Lozinka": "12345678",
+        "Ime": "Milovan",
+        "Prezime": "Aleksic",
+        "Pol": "m",
+        "Email": "milovan.mica@hotmail.com",
+        "DatumRodjenja": "1998-09-09T00:00:00",
+        "Uloga": 2
+      },
+      "MesecnaClanarina": 3000,
+      "GodisnjaClanarina": 12000,
+      "CenaJednogTreninga": 500,
+      "CenaJednogGrupnogTreninga": 1500,
+      "CenaJednogTreningaSaPersonalnimTrenerom": 2000
+    },
+    "TrajanjeTreninga": 40,
+    "DatumIVremeTreninga": "2022-07-02T18:30:00",
+    "MaxBrojPosetilaca": 30,
+    "Posetioci": []
+  },
+  {
+    "Trener": {
+      "DrziTreninge": [],
+      "AngazovanUFitnesCentru": {
+        "Id": 0,
+        "Naziv": null,
+        "Adresa": null,
+        "GodinaOtvaranja": 0,
+        "Vlasnik": {
+          "Id": 1728167145,
+          "PrijavljeniTreninziId": [],
+          "FitnesCentriId": [],
+          "KorisnickoIme": null,
+          "Lozinka": null,
+          "Ime": null,
+          "Prezime": null,
+          "Pol": "\u0000",
+          "Email": null,
+          "DatumRodjenja": "0001-01-01T00:00:00",
+          "Uloga": 2
+        },
+        "MesecnaClanarina": 0,
+        "GodisnjaClanarina": 0,
+        "CenaJednogTreninga": 0,
+        "CenaJednogGrupnogTreninga": 0,
+        "CenaJednogTreningaSaPersonalnimTrenerom": 0
+      },
+      "PrijavljeniTreninziId": [],
+      "FitnesCentriId": [],
+      "Id": 0,
+      "KorisnickoIme": null,
+      "Lozinka": null,
+      "Ime": null,
+      "Prezime": null,
+      "Pol": "\u0000",
+      "Email": null,
+      "DatumRodjenja": "0001-01-01T00:00:00",
+      "Uloga": 1
+    },
+    "Id": 12345,
+    "Naziv": "Trening Snaga",
+    "TipTreninga": "Snaga",
+    "Centar": {
+      "Id": 0,
+      "Naziv": "Flex",
+      "Adresa": "Sutjeska 2,Novi Sad,21000",
+      "GodinaOtvaranja": 2010,
+      "Vlasnik": {
+        "Id": 0,
+        "PrijavljeniTreninziId": [],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "Comi15",
+        "Lozinka": "12345678",
+        "Ime": "Milovan",
+        "Prezime": "Aleksic",
+        "Pol": "m",
+        "Email": "milovan.mica@hotmail.com",
+        "DatumRodjenja": "1998-09-09T00:00:00",
+        "Uloga": 2
+      },
+      "MesecnaClanarina": 3000,
+      "GodisnjaClanarina": 12000,
+      "CenaJednogTreninga": 500,
+      "CenaJednogGrupnogTreninga": 1500,
+      "CenaJednogTreningaSaPersonalnimTrenerom": 2000
+    },
+    "TrajanjeTreninga": 60,
+    "DatumIVremeTreninga": "2022-06-06T18:30:00",
+    "MaxBrojPosetilaca": 30,
+    "Posetioci": []
+  },
+  {
+    "Trener": {
+      "DrziTreninge": [],
+      "AngazovanUFitnesCentru": {
+        "Id": 0,
+        "Naziv": null,
+        "Adresa": null,
+        "GodinaOtvaranja": 0,
+        "Vlasnik": {
+          "Id": 1696276748,
+          "PrijavljeniTreninziId": [],
+          "FitnesCentriId": [],
+          "KorisnickoIme": null,
+          "Lozinka": null,
+          "Ime": null,
+          "Prezime": null,
+          "Pol": "\u0000",
+          "Email": null,
+          "DatumRodjenja": "0001-01-01T00:00:00",
+          "Uloga": 2
+        },
+        "MesecnaClanarina": 0,
+        "GodisnjaClanarina": 0,
+        "CenaJednogTreninga": 0,
+        "CenaJednogGrupnogTreninga": 0,
+        "CenaJednogTreningaSaPersonalnimTrenerom": 0
+      },
+      "PrijavljeniTreninziId": [],
+      "FitnesCentriId": [],
+      "Id": 0,
+      "KorisnickoIme": null,
+      "Lozinka": null,
+      "Ime": null,
+      "Prezime": null,
+      "Pol": "\u0000",
+      "Email": null,
+      "DatumRodjenja": "0001-01-01T00:00:00",
+      "Uloga": 1
+    },
+    "Id": 123456,
+    "Naziv": "Trening Snaga3",
+    "TipTreninga": "Snaga",
+    "Centar": {
+      "Id": 0,
+      "Naziv": "Flex",
+      "Adresa": "Sutjeska 2,Novi Sad,21000",
+      "GodinaOtvaranja": 2010,
+      "Vlasnik": {
+        "Id": 0,
+        "PrijavljeniTreninziId": [],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "Comi15",
+        "Lozinka": "12345678",
+        "Ime": "Milovan",
+        "Prezime": "Aleksic",
+        "Pol": "m",
+        "Email": "milovan.mica@hotmail.com",
+        "DatumRodjenja": "1998-09-09T00:00:00",
+        "Uloga": 2
+      },
+      "MesecnaClanarina": 3000,
+      "GodisnjaClanarina": 12000,
+      "CenaJednogTreninga": 500,
+      "CenaJednogGrupnogTreninga": 1500,
+      "CenaJednogTreningaSaPersonalnimTrenerom": 2000
+    },
+    "TrajanjeTreninga": 60,
+    "DatumIVremeTreninga": "2022-08-03T18:30:00",
+    "MaxBrojPosetilaca": 30,
+    "Posetioci": [
+      {
+        "Id": 321362078,
+        "PrijavljeniTreninziId": [
+          123456
+        ],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "toske",
+        "Lozinka": "toske",
+        "Ime": "Dusan",
+        "Prezime": "Toskovic",
+        "Pol": "m",
+        "Email": "ducatole@gmail.com",
+        "DatumRodjenja": "2000-05-22T00:00:00",
+        "Uloga": 0
+      },
+      {
+        "Id": 631748958,
+        "PrijavljeniTreninziId": [
+          123456
+        ],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "Pera",
+        "Lozinka": "pera123",
+        "Ime": "Pera",
+        "Prezime": "Peric",
+        "Pol": "m",
+        "Email": "pero@hotmail.com",
+        "DatumRodjenja": "1995-04-05T00:00:00",
+        "Uloga": 0
+      },
+      {
+        "Id": 119235466,
+        "PrijavljeniTreninziId": [
+          123456
+        ],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "aca",
+        "Lozinka": "axa123",
+        "Ime": "Aleksandar",
+        "Prezime": "Zaric",
+        "Pol": "m",
+        "Email": "zare@gmail.com",
+        "DatumRodjenja": "2000-10-10T00:00:00",
+        "Uloga": 0
+      },
+      {
+        "Id": 321362078,
+        "PrijavljeniTreninziId": [
+          123456,
+          5915981
+        ],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "toske",
+        "Lozinka": "toske",
+        "Ime": "Dusan",
+        "Prezime": "Toskovic",
+        "Pol": "m",
+        "Email": "ducatole@gmail.com",
+        "DatumRodjenja": "2000-05-22T00:00:00",
+        "Uloga": 0
+      },
+      {
+        "Id": 321362078,
+        "PrijavljeniTreninziId": [
+          123456,
+          5915981,
+          58815213
+        ],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "toske",
+        "Lozinka": "toske",
+        "Ime": "Dusan",
+        "Prezime": "Toskovic",
+        "Pol": "m",
+        "Email": "ducatole@gmail.com",
+        "DatumRodjenja": "2000-05-22T00:00:00",
+        "Uloga": 0
+      },
+      {
+        "Id": 321362078,
+        "PrijavljeniTreninziId": [
+          123456,
+          5915981,
+          58815213,
+          941841894
+        ],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "toske",
+        "Lozinka": "toske",
+        "Ime": "Dusan",
+        "Prezime": "Toskovic",
+        "Pol": "m",
+        "Email": "ducatole@gmail.com",
+        "DatumRodjenja": "2000-05-22T00:00:00",
+        "Uloga": 0
+      },
+      {
+        "Id": 631748958,
+        "PrijavljeniTreninziId": [
+          123456,
+          58815213
+        ],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "Pera",
+        "Lozinka": "pera123",
+        "Ime": "Pera",
+        "Prezime": "Peric",
+        "Pol": "m",
+        "Email": "pero@hotmail.com",
+        "DatumRodjenja": "1995-04-05T00:00:00",
+        "Uloga": 0
+      }
+    ]
+  },
+  {
+    "Trener": {
+      "DrziTreninge": [],
+      "AngazovanUFitnesCentru": {
+        "Id": 0,
+        "Naziv": null,
+        "Adresa": null,
+        "GodinaOtvaranja": 0,
+        "Vlasnik": {
+          "Id": 85638346,
+          "PrijavljeniTreninziId": [],
+          "FitnesCentriId": [],
+          "KorisnickoIme": null,
+          "Lozinka": null,
+          "Ime": null,
+          "Prezime": null,
+          "Pol": "\u0000",
+          "Email": null,
+          "DatumRodjenja": "0001-01-01T00:00:00",
+          "Uloga": 2
+        },
+        "MesecnaClanarina": 0,
+        "GodisnjaClanarina": 0,
+        "CenaJednogTreninga": 0,
+        "CenaJednogGrupnogTreninga": 0,
+        "CenaJednogTreningaSaPersonalnimTrenerom": 0
+      },
+      "PrijavljeniTreninziId": [],
+      "FitnesCentriId": [],
+      "Id": 0,
+      "KorisnickoIme": null,
+      "Lozinka": null,
+      "Ime": null,
+      "Prezime": null,
+      "Pol": "\u0000",
+      "Email": null,
+      "DatumRodjenja": "0001-01-01T00:00:00",
+      "Uloga": 1
+    },
+    "Id": 1234567,
+    "Naziv": "Trening Snaga2",
+    "TipTreninga": "Snaga",
+    "Centar": {
+      "Id": 0,
+      "Naziv": "Gladiator Gym",
+      "Adresa": "Djordja Servickog 16,Novi Sad,21000",
+      "GodinaOtvaranja": 2017,
+      "Vlasnik": {
+        "Id": 0,
+        "PrijavljeniTreninziId": [],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "Comi15",
+        "Lozinka": "12345678",
+        "Ime": "Milovan",
+        "Prezime": "Aleksic",
+        "Pol": "m",
+        "Email": "milovan.mica@hotmail.com",
+        "DatumRodjenja": "1998-09-09T00:00:00",
+        "Uloga": 2
+      },
+      "MesecnaClanarina": 2500,
+      "GodisnjaClanarina": 10000,
+      "CenaJednogTreninga": 400,
+      "CenaJednogGrupnogTreninga": 1200,
+      "CenaJednogTreningaSaPersonalnimTrenerom": 1600
+    },
+    "TrajanjeTreninga": 60,
+    "DatumIVremeTreninga": "2022-07-02T18:30:00",
+    "MaxBrojPosetilaca": 30,
+    "Posetioci": []
+  },
+  {
+    "Trener": {
+      "DrziTreninge": [],
+      "AngazovanUFitnesCentru": {
+        "Id": 0,
+        "Naziv": null,
+        "Adresa": null,
+        "GodinaOtvaranja": 0,
+        "Vlasnik": {
+          "Id": 532872536,
+          "PrijavljeniTreninziId": [],
+          "FitnesCentriId": [],
+          "KorisnickoIme": null,
+          "Lozinka": null,
+          "Ime": null,
+          "Prezime": null,
+          "Pol": "\u0000",
+          "Email": null,
+          "DatumRodjenja": "0001-01-01T00:00:00",
+          "Uloga": 2
+        },
+        "MesecnaClanarina": 0,
+        "GodisnjaClanarina": 0,
+        "CenaJednogTreninga": 0,
+        "CenaJednogGrupnogTreninga": 0,
+        "CenaJednogTreningaSaPersonalnimTrenerom": 0
+      },
+      "PrijavljeniTreninziId": [],
+      "FitnesCentriId": [],
+      "Id": 0,
+      "KorisnickoIme": null,
+      "Lozinka": null,
+      "Ime": null,
+      "Prezime": null,
+      "Pol": "\u0000",
+      "Email": null,
+      "DatumRodjenja": "0001-01-01T00:00:00",
+      "Uloga": 1
+    },
+    "Id": 5915981,
+    "Naziv": "Trening Snaga 6",
+    "TipTreninga": "Snaga",
+    "Centar": {
+      "Id": 0,
+      "Naziv": "Gladiator Gym",
+      "Adresa": "Djordja Servickog 16,Novi Sad,21000",
+      "GodinaOtvaranja": 2017,
+      "Vlasnik": {
+        "Id": 0,
+        "PrijavljeniTreninziId": [],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "Comi15",
+        "Lozinka": "12345678",
+        "Ime": "Milovan",
+        "Prezime": "Aleksic",
+        "Pol": "m",
+        "Email": "milovan.mica@hotmail.com",
+        "DatumRodjenja": "1998-09-09T00:00:00",
+        "Uloga": 2
+      },
+      "MesecnaClanarina": 2500,
+      "GodisnjaClanarina": 10000,
+      "CenaJednogTreninga": 400,
+      "CenaJednogGrupnogTreninga": 1200,
+      "CenaJednogTreningaSaPersonalnimTrenerom": 1600
+    },
+    "TrajanjeTreninga": 60,
+    "DatumIVremeTreninga": "2022-07-02T20:00:00",
+    "MaxBrojPosetilaca": 30,
+    "Posetioci": [
+      {
+        "Id": 321362078,
+        "PrijavljeniTreninziId": [
+          123456,
+          5915981
+        ],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "toske",
+        "Lozinka": "toske",
+        "Ime": "Dusan",
+        "Prezime": "Toskovic",
+        "Pol": "m",
+        "Email": "ducatole@gmail.com",
+        "DatumRodjenja": "2000-05-22T00:00:00",
+        "Uloga": 0
+      },
+      {
+        "Id": 321362078,
+        "PrijavljeniTreninziId": [
+          123456,
+          5915981,
+          58815213
+        ],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "toske",
+        "Lozinka": "toske",
+        "Ime": "Dusan",
+        "Prezime": "Toskovic",
+        "Pol": "m",
+        "Email": "ducatole@gmail.com",
+        "DatumRodjenja": "2000-05-22T00:00:00",
+        "Uloga": 0
+      },
+      {
+        "Id": 321362078,
+        "PrijavljeniTreninziId": [
+          123456,
+          5915981,
+          58815213,
+          941841894
+        ],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "toske",
+        "Lozinka": "toske",
+        "Ime": "Dusan",
+        "Prezime": "Toskovic",
+        "Pol": "m",
+        "Email": "ducatole@gmail.com",
+        "DatumRodjenja": "2000-05-22T00:00:00",
+        "Uloga": 0
+      }
+    ]
+  },
+  {
+    "Trener": {
+      "DrziTreninge": [],
+      "AngazovanUFitnesCentru": {
+        "Id": 0,
+        "Naziv": null,
+        "Adresa": null,
+        "GodinaOtvaranja": 0,
+        "Vlasnik": {
+          "Id": 968762397,
+          "PrijavljeniTreninziId": [],
+          "FitnesCentriId": [],
+          "KorisnickoIme": null,
+          "Lozinka": null,
+          "Ime": null,
+          "Prezime": null,
+          "Pol": "\u0000",
+          "Email": null,
+          "DatumRodjenja": "0001-01-01T00:00:00",
+          "Uloga": 2
+        },
+        "MesecnaClanarina": 0,
+        "GodisnjaClanarina": 0,
+        "CenaJednogTreninga": 0,
+        "CenaJednogGrupnogTreninga": 0,
+        "CenaJednogTreningaSaPersonalnimTrenerom": 0
+      },
+      "PrijavljeniTreninziId": [],
+      "FitnesCentriId": [],
+      "Id": 0,
+      "KorisnickoIme": null,
+      "Lozinka": null,
+      "Ime": null,
+      "Prezime": null,
+      "Pol": "\u0000",
+      "Email": null,
+      "DatumRodjenja": "0001-01-01T00:00:00",
+      "Uloga": 1
+    },
+    "Id": 58815213,
+    "Naziv": "Trening Snaga 10",
+    "TipTreninga": "Snaga",
+    "Centar": {
+      "Id": 0,
+      "Naziv": "Gladiator Gym",
+      "Adresa": "Djordja Servickog 16,Novi Sad,21000",
+      "GodinaOtvaranja": 2017,
+      "Vlasnik": {
+        "Id": 0,
+        "PrijavljeniTreninziId": [],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "Comi15",
+        "Lozinka": "12345678",
+        "Ime": "Milovan",
+        "Prezime": "Aleksic",
+        "Pol": "m",
+        "Email": "milovan.mica@hotmail.com",
+        "DatumRodjenja": "1998-09-09T00:00:00",
+        "Uloga": 2
+      },
+      "MesecnaClanarina": 2500,
+      "GodisnjaClanarina": 10000,
+      "CenaJednogTreninga": 400,
+      "CenaJednogGrupnogTreninga": 1200,
+      "CenaJednogTreningaSaPersonalnimTrenerom": 1600
+    },
+    "TrajanjeTreninga": 60,
+    "DatumIVremeTreninga": "2022-07-08T20:00:00",
+    "MaxBrojPosetilaca": 32,
+    "Posetioci": [
+      {
+        "Id": 321362078,
+        "PrijavljeniTreninziId": [
+          123456,
+          5915981,
+          58815213
+        ],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "toske",
+        "Lozinka": "toske",
+        "Ime": "Dusan",
+        "Prezime": "Toskovic",
+        "Pol": "m",
+        "Email": "ducatole@gmail.com",
+        "DatumRodjenja": "2000-05-22T00:00:00",
+        "Uloga": 0
+      },
+      {
+        "Id": 321362078,
+        "PrijavljeniTreninziId": [
+          123456,
+          5915981,
+          58815213,
+          941841894
+        ],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "toske",
+        "Lozinka": "toske",
+        "Ime": "Dusan",
+        "Prezime": "Toskovic",
+        "Pol": "m",
+        "Email": "ducatole@gmail.com",
+        "DatumRodjenja": "2000-05-22T00:00:00",
+        "Uloga": 0
+      },
+      {
+        "Id": 631748958,
+        "PrijavljeniTreninziId": [
+          123456,
+          58815213
+        ],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "Pera",
+        "Lozinka": "pera123",
+        "Ime": "Pera",
+        "Prezime": "Peric",
+        "Pol": "m",
+        "Email": "pero@hotmail.com",
+        "DatumRodjenja": "1995-04-05T00:00:00",
+        "Uloga": 0
+      }
+    ]
+  },
+  {
+    "Trener": {
+      "DrziTreninge": [],
+      "AngazovanUFitnesCentru": {
+        "Id": 0,
+        "Naziv": null,
+        "Adresa": null,
+        "GodinaOtvaranja": 0,
+        "Vlasnik": {
+          "Id": 293166494,
+          "PrijavljeniTreninziId": [],
+          "FitnesCentriId": [],
+          "KorisnickoIme": null,
+          "Lozinka": null,
+          "Ime": null,
+          "Prezime": null,
+          "Pol": "\u0000",
+          "Email": null,
+          "DatumRodjenja": "0001-01-01T00:00:00",
+          "Uloga": 2
+        },
+        "MesecnaClanarina": 0,
+        "GodisnjaClanarina": 0,
+        "CenaJednogTreninga": 0,
+        "CenaJednogGrupnogTreninga": 0,
+        "CenaJednogTreningaSaPersonalnimTrenerom": 0
+      },
+      "PrijavljeniTreninziId": [],
+      "FitnesCentriId": [],
+      "Id": 0,
+      "KorisnickoIme": null,
+      "Lozinka": null,
+      "Ime": null,
+      "Prezime": null,
+      "Pol": "\u0000",
+      "Email": null,
+      "DatumRodjenja": "0001-01-01T00:00:00",
+      "Uloga": 1
+    },
+    "Id": 941841894,
+    "Naziv": "Trening Yoga 22",
+    "TipTreninga": "Yoga",
+    "Centar": {
+      "Id": 0,
+      "Naziv": "Alpha Gym",
+      "Adresa": "Polgar Andrasa 16,Novi Sad,21000",
+      "GodinaOtvaranja": 2001,
+      "Vlasnik": {
+        "Id": 6678,
+        "PrijavljeniTreninziId": [],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "MarijaAlpha",
+        "Lozinka": "alpha123",
+        "Ime": "Marija",
+        "Prezime": "Andric",
+        "Pol": "z",
+        "Email": "maraandric@gmail.com",
+        "DatumRodjenja": "1998-03-24T00:00:00",
+        "Uloga": 2
+      },
+      "MesecnaClanarina": 2500,
+      "GodisnjaClanarina": 10000,
+      "CenaJednogTreninga": 400,
+      "CenaJednogGrupnogTreninga": 1200,
+      "CenaJednogTreningaSaPersonalnimTrenerom": 1600
+    },
+    "TrajanjeTreninga": 45,
+    "DatumIVremeTreninga": "2022-07-02T20:30:00",
+    "MaxBrojPosetilaca": 32,
+    "Posetioci": [
+      {
+        "Id": 321362078,
+        "PrijavljeniTreninziId": [
+          123456,
+          5915981,
+          58815213,
+          941841894
+        ],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "toske",
+        "Lozinka": "toske",
+        "Ime": "Dusan",
+        "Prezime": "Toskovic",
+        "Pol": "m",
+        "Email": "ducatole@gmail.com",
+        "DatumRodjenja": "2000-05-22T00:00:00",
+        "Uloga": 0
+      }
+    ]
+  },
+  {
+    "Trener": {
+      "DrziTreninge": [],
+      "AngazovanUFitnesCentru": {
+        "Id": 5681723,
+        "Naziv": "Gladiator Gym",
+        "Adresa": "Djordja Servickog 16,Novi Sad,21000",
+        "GodinaOtvaranja": 2017,
+        "Vlasnik": {
+          "Id": 1809875248,
+          "PrijavljeniTreninziId": [],
+          "FitnesCentriId": [],
+          "KorisnickoIme": "Comi15",
+          "Lozinka": "12345678",
+          "Ime": "Milovan",
+          "Prezime": "Aleksic",
+          "Pol": "m",
+          "Email": "milovan.mica@hotmail.com",
+          "DatumRodjenja": "1998-09-09T00:00:00",
+          "Uloga": 2
+        },
+        "MesecnaClanarina": 2500,
+        "GodisnjaClanarina": 10000,
+        "CenaJednogTreninga": 400,
+        "CenaJednogGrupnogTreninga": 1200,
+        "CenaJednogTreningaSaPersonalnimTrenerom": 1600
+      },
+      "PrijavljeniTreninziId": [],
+      "FitnesCentriId": [],
+      "Id": 1605614926,
+      "KorisnickoIme": "ronin",
+      "Lozinka": "ronin123",
+      "Ime": "Misa",
+      "Prezime": "Baculov",
+      "Pol": "m",
+      "Email": "ronin@gmail.com",
+      "DatumRodjenja": "1989-05-29T00:00:00",
+      "Uloga": 1
+    },
+    "Id": 1688401927,
+    "Naziv": "TreningSnagaGG",
+    "TipTreninga": "snaga",
+    "Centar": {
+      "Id": 5681723,
+      "Naziv": "Gladiator Gym",
+      "Adresa": "Djordja Servickog 16,Novi Sad,21000",
+      "GodinaOtvaranja": 2017,
+      "Vlasnik": {
+        "Id": 1809875248,
+        "PrijavljeniTreninziId": [],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "Comi15",
+        "Lozinka": "12345678",
+        "Ime": "Milovan",
+        "Prezime": "Aleksic",
+        "Pol": "m",
+        "Email": "milovan.mica@hotmail.com",
+        "DatumRodjenja": "1998-09-09T00:00:00",
+        "Uloga": 2
+      },
+      "MesecnaClanarina": 2500,
+      "GodisnjaClanarina": 10000,
+      "CenaJednogTreninga": 400,
+      "CenaJednogGrupnogTreninga": 1200,
+      "CenaJednogTreningaSaPersonalnimTrenerom": 1600
+    },
+    "TrajanjeTreninga": 0,
+    "DatumIVremeTreninga": "2022-07-07T18:00:00",
+    "MaxBrojPosetilaca": 40,
+    "Posetioci": []
+  },
+  {
+    "Trener": {
+      "DrziTreninge": [],
+      "AngazovanUFitnesCentru": {
+        "Id": 5681723,
+        "Naziv": "Gladiator Gym",
+        "Adresa": "Djordja Servickog 16,Novi Sad,21000",
+        "GodinaOtvaranja": 2017,
+        "Vlasnik": {
+          "Id": 1809875248,
+          "PrijavljeniTreninziId": [],
+          "FitnesCentriId": [],
+          "KorisnickoIme": "Comi15",
+          "Lozinka": "12345678",
+          "Ime": "Milovan",
+          "Prezime": "Aleksic",
+          "Pol": "m",
+          "Email": "milovan.mica@hotmail.com",
+          "DatumRodjenja": "1998-09-09T00:00:00",
+          "Uloga": 2
+        },
+        "MesecnaClanarina": 2500,
+        "GodisnjaClanarina": 10000,
+        "CenaJednogTreninga": 400,
+        "CenaJednogGrupnogTreninga": 1200,
+        "CenaJednogTreningaSaPersonalnimTrenerom": 1600
+      },
+      "PrijavljeniTreninziId": [],
+      "FitnesCentriId": [],
+      "Id": 1605614926,
+      "KorisnickoIme": "ronin",
+      "Lozinka": "ronin123",
+      "Ime": "Misa",
+      "Prezime": "Baculov",
+      "Pol": "m",
+      "Email": "ronin@gmail.com",
+      "DatumRodjenja": "1989-05-29T00:00:00",
+      "Uloga": 1
+    },
+    "Id": 1377305533,
+    "Naziv": "RoninTrening",
+    "TipTreninga": "crossfit",
+    "Centar": {
+      "Id": 5681723,
+      "Naziv": "Gladiator Gym",
+      "Adresa": "Djordja Servickog 16,Novi Sad,21000",
+      "GodinaOtvaranja": 2017,
+      "Vlasnik": {
+        "Id": 1809875248,
+        "PrijavljeniTreninziId": [],
+        "FitnesCentriId": [],
+        "KorisnickoIme": "Comi15",
+        "Lozinka": "12345678",
+        "Ime": "Milovan",
+        "Prezime": "Aleksic",
+        "Pol": "m",
+        "Email": "milovan.mica@hotmail.com",
+        "DatumRodjenja": "1998-09-09T00:00:00",
+        "Uloga": 2
+      },
+      "MesecnaClanarina": 2500,
+      "GodisnjaClanarina": 10000,
+      "CenaJednogTreninga": 400,
+      "CenaJednogGrupnogTreninga": 1200,
+      "CenaJednogTreningaSaPersonalnimTrenerom": 1600
+    },
+    "TrajanjeTreninga": 0,
+    "DatumIVremeTreninga": "2022-07-08T09:00:00",
+    "MaxBrojPosetilaca": 40,
+    "Posetioci": []
+  }
+]

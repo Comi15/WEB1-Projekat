@@ -1,0 +1,68 @@
+[
+  {
+    "Id":4567123,
+    "Naziv": "Flex",
+    "Adresa": "Sutjeska 2,Novi Sad,21000",
+    "GodinaOtvaranja": 2010,
+     "Vlasnik": {
+	"KorisnickoIme": "Comi15",
+    	"Lozinka": "12345678",
+    	"Ime": "Milovan",
+    	"Prezime": "Aleksic",
+    	"Pol": "m",
+    	"Email": "milovan.mica@hotmail.com",
+    	"DatumRodjenja": "1998-09-09T00:00:00",
+    	"Uloga": 2
+},
+    "MesecnaClanarina": 3000,
+    "GodisnjaClanarina": 12000,
+    "CenaJednogTreninga": 500,
+    "CenaJednogGrupnogTreninga": 1500,
+    "CenaJednogTreningaSaPersonalnimTrenerom": 2000
+  },
+  {
+    "Id":5681723,
+    "Naziv": "Gladiator Gym",
+    "Adresa": "Djordja Servickog 16,Novi Sad,21000",
+    "GodinaOtvaranja": 2017,
+    "Vlasnik": {
+	"KorisnickoIme": "Comi15",
+    	"Lozinka": "12345678",
+    	"Ime": "Milovan",
+    	"Prezime": "Aleksic",
+    	"Pol": "m",
+    	"Email": "milovan.mica@hotmail.com",
+    	"DatumRodjenja": "1998-09-09T00:00:00",
+    	"Uloga": 2
+},
+    "MesecnaClanarina": 2500,
+    "GodisnjaClanarina": 10000,
+    "CenaJednogTreninga": 400,
+    "CenaJednogGrupnogTreninga": 1200,
+    "CenaJednogTreningaSaPersonalnimTrenerom": 1600
+  },
+
+  {
+    "Id":98717237,
+    "Naziv": "Alpha Gym",
+    "Adresa": "Polgar Andrasa 16,Novi Sad,21000",
+    "GodinaOtvaranja": 2001,
+    "Vlasnik": {
+	"KorisnickoIme": "MarijaAlpha",
+    	"Lozinka": "alpha123",
+    	"Ime": "Marija",
+    	"Prezime": "Andric",
+    	"Pol": "z",
+    	"Email": "maraandric@gmail.com",
+    	"DatumRodjenja": "1998-03-24T00:00:00",
+    	"Uloga": 2
+},
+
+    "MesecnaClanarina": 2200,
+    "GodisnjaClanarina": 9500,
+    "CenaJednogTreninga": 400,
+    "CenaJednogGrupnogTreninga": 1200,
+    "CenaJednogTreningaSaPersonalnimTrenerom": 1600
+  }
+	
+]

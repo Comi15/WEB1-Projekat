@@ -1,0 +1,135 @@
+[
+  {
+    "Posetilac": {
+      "Id": 321362078,
+      "PrijavljeniTreninziId": [
+        123456,
+        5915981,
+        58815213,
+        941841894
+      ],
+      "PosedujeCentre": [],
+      "KorisnickoIme": "toske",
+      "Lozinka": "toske",
+      "Ime": "Dusan",
+      "Prezime": "Toskovic",
+      "Pol": "m",
+      "Email": "ducatole@gmail.com",
+      "DatumRodjenja": "2000-05-22T00:00:00",
+      "Uloga": 0
+    },
+    "FitnesCentar": {
+      "Naziv": "Gladiator Gym",
+      "Adresa": "Djordja Servickog 16,Novi Sad,21000",
+      "GodinaOtvaranja": 2017,
+      "Vlasnik": {
+        "Id": 0,
+        "PrijavljeniTreninziId": [],
+        "PosedujeCentre": [],
+        "KorisnickoIme": "Comi15",
+        "Lozinka": "12345678",
+        "Ime": "Milovan",
+        "Prezime": "Aleksic",
+        "Pol": "m",
+        "Email": "milovan.mica@hotmail.com",
+        "DatumRodjenja": "1998-09-09T00:00:00",
+        "Uloga": 2
+      },
+      "MesecnaClanarina": 2500,
+      "GodisnjaClanarina": 10000,
+      "CenaJednogTreninga": 400,
+      "CenaJednogGrupnogTreninga": 1200,
+      "CenaJednogTreningaSaPersonalnimTrenerom": 1600
+    },
+    "TextKomentara": "Odlicni treninzii!!!",
+    "Ocena": 5
+  },
+  {
+    "Posetilac": {
+      "Id": 631748958,
+      "PrijavljeniTreninziId": [
+        123456,
+        58815213
+      ],
+      "PosedujeCentre": [],
+      "KorisnickoIme": "Pera",
+      "Lozinka": "pera123",
+      "Ime": "Pera",
+      "Prezime": "Peric",
+      "Pol": "m",
+      "Email": "pero@hotmail.com",
+      "DatumRodjenja": "1995-04-05T00:00:00",
+      "Uloga": 0
+    },
+    "FitnesCentar": {
+      "Naziv": "Gladiator Gym",
+      "Adresa": "Djordja Servickog 16,Novi Sad,21000",
+      "GodinaOtvaranja": 2017,
+      "Vlasnik": {
+        "Id": 0,
+        "PrijavljeniTreninziId": [],
+        "PosedujeCentre": [],
+        "KorisnickoIme": "Comi15",
+        "Lozinka": "12345678",
+        "Ime": "Milovan",
+        "Prezime": "Aleksic",
+        "Pol": "m",
+        "Email": "milovan.mica@hotmail.com",
+        "DatumRodjenja": "1998-09-09T00:00:00",
+        "Uloga": 2
+      },
+      "MesecnaClanarina": 2500,
+      "GodisnjaClanarina": 10000,
+      "CenaJednogTreninga": 400,
+      "CenaJednogGrupnogTreninga": 1200,
+      "CenaJednogTreningaSaPersonalnimTrenerom": 1600
+    },
+    "TextKomentara": "Solidno",
+    "Ocena": 3
+  },
+  {
+    "Posetilac": {
+      "Id": 321362078,
+      "PrijavljeniTreninziId": [
+        123456,
+        5915981,
+        58815213,
+        941841894
+      ],
+      "PosedujeCentre": [],
+      "KorisnickoIme": "toske",
+      "Lozinka": "toske",
+      "Ime": "Dusan",
+      "Prezime": "Toskovic",
+      "Pol": "m",
+      "Email": "ducatole@gmail.com",
+      "DatumRodjenja": "2000-05-22T00:00:00",
+      "Uloga": 0
+    },
+    "FitnesCentar": {
+      "Naziv": "Alpha Gym",
+      "Adresa": "Polgar Andrasa 16,Novi Sad,21000",
+      "GodinaOtvaranja": 2001,
+      "Vlasnik": {
+        "Id": 0,
+        "PrijavljeniTreninziId": [],
+        "PosedujeCentre": [],
+        "KorisnickoIme": "MarijaAlpha",
+        "Lozinka": "alpha123",
+        "Ime": "Marija",
+        "Prezime": "Andric",
+        "Pol": "z",
+        "Email": "maraandric@gmail.com",
+        "DatumRodjenja": "1998-03-24T00:00:00",
+        "Uloga": 2
+      },
+      "MesecnaClanarina": 2200,
+      "GodisnjaClanarina": 9500,
+      "CenaJednogTreninga": 400,
+      "CenaJednogGrupnogTreninga": 1200,
+      "CenaJednogTreningaSaPersonalnimTrenerom": 1600
+    },
+    "TextKomentara": "Nisam zadovoljan uopste...",
+    "Ocena": 2
+  }
+]

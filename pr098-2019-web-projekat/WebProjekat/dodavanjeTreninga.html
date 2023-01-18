@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+
+    <style>
+        .center {
+            margin: 0 auto;
+            width: 60%;
+            padding: 10px;
+        }
+
+        #dodajTrening {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #dodajTrening td, #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #dodajTrening tr:nth-child(even) {
+                background-color: #8db9a6
+            }
+
+            #dodajTrening tr:hover {
+                background-color: #3EB2FD;
+            }
+
+            #dodajTrening th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+            }
+
+        .button {
+            align-items: center;
+            background-color: #3EB2FD;
+            background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+            background-size: calc(100% + 20px) calc(100% + 20px);
+            border-radius: 100px;
+            border-width: 0;
+            box-shadow: none;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: CircularStd,sans-serif;
+            font-size: 1rem;
+            height: auto;
+            justify-content: center;
+            line-height: 1.5;
+            padding: 6px 20px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color .2s,background-position .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: top;
+            white-space: nowrap;
+        }
+
+            .button:active,
+            .button:focus {
+                outline: none;
+            }
+
+            .button:hover {
+                background-position: -20px -20px;
+            }
+
+            .button:focus:not(:active) {
+                box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+            }
+
+    </style>
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var ulogovanKorisnik = JSON.parse(sessionStorage["ulogovanKorisnik"]);
+            console.log(ulogovanKorisnik);
+
+            $("#home").click(function () {
+                location.href = "index.html";
+            });
+
+            $("#home").hover(function () {
+                $("#home").css('color', 'white');
+            });
+
+            $("#home").mouseleave(function () {
+                $("#home").css('color', '#000000');
+            });
+
+
+            let datum = document.querySelector('input[name="datum"]');
+            let trenutniDatum = new Date();
+            let rezultat = trenutniDatum.setDate(trenutniDatum.getDate() + 3);
+            let minimalni = new Date(rezultat).toISOString();
+            let min = minimalni.split('.')[0]
+            datum.setAttribute('min', min);
+
+            console.log(minimalni);
+           
+
+
+            $("#treningSubmit").click(function () {
+
+                var a = false;
+                var naziv = $("#naziv").val();
+                var tip = $("#tip").val();
+                var trajanje = $("#tip").val();
+                var datum = $("#tip").val();
+                var maxBr = $("#maxBr").val();
+
+                var datumPravi = new Date(datum);
+                var datumPraviString = datumPravi.toLocaleDateString();
+                console.log(datum);
+                
+                
+                if (naziv.length === 0 || tip.length === 0 || trajanje.length === 0 || datum.length === 0 || maxBr.length === 0)
+                {
+                    alert("Sva polja moraju biti popunjena");
+                    return
+                }
+
+                if (trajanje <= 0)
+                {
+                    alert("Trajanje treninga ne moze biti negativan broj");
+                    return;
+                }
+
+                if (maxBr <= 0)
+                {
+                    alert("Max broj posetilaca ne moze biti negativan broj");
+                }
+
+
+                $.get("/api/GrupniTrening", function (dataTrening, status) {
+                    for (item in dataTrening) {
+                        if (dataTrening[item].Naziv === naziv) {
+                            console.log("usao u isto korisnicko ime");
+                            alert("Trening sa zadatim nazivom vec postoji u bazi");
+                            a = true;
+                            
+
+                        }
+                    }
+
+                    if (a) { return;}
+                            $.post('/api/GrupniTrening', { 'Trener': ulogovanKorisnik, 'Naziv': naziv, 'TipTreninga': tip, 'Centar': ulogovanKorisnik.AngazovanUFitnesCentru, 'Trajanje': trajanje, "DatumIVremeTreninga": datum, 'MaxBrojPosetilaca': maxBr },
+                                function (result) {
+                                    console.log(result);
+                                    alert('Uspesno ste dodali trening!');
+                                    
+                                    location.href = 'index.html';
+                                }
+                            ).fail(function (xhr, ajaxOptions, thrownError) {
+                                alert('Error: ' + xhr.status);
+                            });
+                        
+
+                    
+                });
+
+            });
+
+
+    });
+    </script>
+</head>
+<body style="background-color:#8db9a6">
+    <div align="left">
+        <h1 id="home" style="color:#000000;font-family:'Times New Roman', Times, serif;cursor:pointer">HOME</h1>
+    </div>
+    <hr />
+
+
+    <div id="dodajTreningDiv" class=" center">
+        <table id="dodajTrening">
+            <tr><td>Naziv:<td><input type="text" id="naziv" /></td></tr>
+            <tr><td>Tip:<td><input type="text" id="tip" /></td></tr>
+            <tr><td>Trajanje(min):<td><input type="number" id="trajanje" /></td></tr>
+            <tr><td>Datum i vreme:<td><input type="datetime-local" id="datum" name="datum" /></td></tr>
+            <tr><td>Max broj posetilaca:<td><input type="number" id="maxBr" /></td></tr>
+            <tr><td colspan="2" align="center"><input class="button" type="submit" id="treningSubmit" value="Dodaj" /> </td></tr>
+
+
+        </table>
+    </div>
+</body>
+</html>

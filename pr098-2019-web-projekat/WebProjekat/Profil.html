@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <style>
+
+        .center {
+            margin: 0 auto;
+            width: 60%;
+            padding: 10px;
+        }
+
+        #korisnici {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #korisnici td, #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #korisnici tr:nth-child(even) {
+                background-color: #8db9a6
+            }
+
+            #korisnici tr:hover {
+                background-color: #3EB2FD;
+            }
+
+            #korisnici th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+            }
+
+        #korisniciUredi {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #korisniciUredi td, #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #korisniciUredi tr:nth-child(even) {
+                background-color: #8db9a6
+            }
+
+            #korisniciUredi tr:hover {
+                background-color: #3EB2FD;
+            }
+
+            #korisniciUredi th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+            }
+
+
+
+        .button {
+            align-items: center;
+            background-color: #3EB2FD;
+            background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+            background-size: calc(100% + 20px) calc(100% + 20px);
+            border-radius: 100px;
+            border-width: 0;
+            box-shadow: none;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: CircularStd,sans-serif;
+            font-size: 1rem;
+            height: auto;
+            justify-content: center;
+            line-height: 1.5;
+            padding: 6px 20px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color .2s,background-position .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: top;
+            white-space: nowrap;
+        }
+
+            .button:active,
+            .button:focus {
+                outline: none;
+            }
+
+            .button:hover {
+                background-position: -20px -20px;
+            }
+
+            .button:focus:not(:active) {
+                box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+            }
+
+
+    </style>
+
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            showKorisnikInfo();
+
+            var ulogovanKorisnik = JSON.parse(sessionStorage["ulogovanKorisnik"]);
+
+            $("#home").click(function () {
+                location.href = "index.html";
+            });
+
+            $("#home").hover(function () {
+                $("#home").css('color', 'white');
+            });
+
+            $("#home").mouseleave(function () {
+                $("#home").css('color', '#000000');
+            });
+
+
+
+            function showKorisnikInfo() {
+                var ulogovanKorisnik = JSON.parse(sessionStorage["ulogovanKorisnik"]);
+                let datumRodjenja = new Date(ulogovanKorisnik.DatumRodjenja);
+                let datumRodjenjaString = datumRodjenja.toDateString();
+                let datumSplit = datumRodjenjaString.split(" ");
+
+                var table = '<table id="korisnici" border="1" style="margin-left:auto; margin-right:auto; "><tr><th colspan="2" style="text-align:center">Korisnik</th></tr>';
+                table += '<tr><td>Korisnicko ime:</td><td>' + ulogovanKorisnik.KorisnickoIme + '</td></tr>';
+                table += '<tr><td>Lozinka:</td><td>' + ulogovanKorisnik.Lozinka + '</td></tr>';
+                table += '<tr><td>Ime:</td><td>' + ulogovanKorisnik.Ime + '</td></tr>';
+                table += '<tr><td>Prezime:</td><td>' + ulogovanKorisnik.Prezime + '</td></tr>';
+                table += '<tr><td>Pol:</td><td>' + ulogovanKorisnik.Pol + '</td></tr>';
+                table += '<tr><td>Email:</td><td>' + ulogovanKorisnik.Email + '</td></tr>';
+                table += '<tr><td>Datum rodjenja:</td><td>' + datumSplit[2] + '/' + datumSplit[1] + '/' + datumSplit[3] + '</td></tr>';
+
+                table += '</table>';
+                $("#profilDiv").html(table);
+            }
+
+            let datumRodjenja = new Date(ulogovanKorisnik.DatumRodjenja);
+            let datumRodjenjaString = datumRodjenja.toDateString();
+            let datumSplit = datumRodjenjaString.split(" ");
+
+            $("#korisnickoImeUredi").val(ulogovanKorisnik.KorisnickoIme);
+            $("#lozinkaUredi").val(ulogovanKorisnik.Lozinka);
+            $("#imeUredi").val(ulogovanKorisnik.Ime);
+            $("#prezimeUredi").val(ulogovanKorisnik.Prezime);
+            $("#polUredi").val(ulogovanKorisnik.Pol);
+            $("#emailUredi").val(ulogovanKorisnik.Email);
+
+            console.log(ulogovanKorisnik.Id);
+
+            $("#urediSubmit").click(function () {
+                
+
+                
+                var ki = $("#korisnickoImeUredi").val();
+                var l = $("#lozinkaUredi").val();
+                var i = $("#imeUredi").val();
+                var pr = $("#prezimeUredi").val();
+                var p = $("#polUredi").val();
+                var e = $("#emailUredi").val();
+                var d = $("#datumUredi").val();
+
+
+                ulogovanKorisnik.KorisnickoIme = ki;
+                ulogovanKorisnik.Lozinka = l;
+                ulogovanKorisnik.Ime = i;
+                ulogovanKorisnik.Prezime = p;
+                ulogovanKorisnik.Email = e;
+                ulogovanKorisnik.DatumRodjenja = d;
+                
+
+                if (ki.length === 0 || l.length === 0 || i.length === 0 || pr.length === 0 || p.length === 0 || e.length === 0 || d.length === 0)
+                {
+                    alert("Sva polja moraju biti popunjena!");
+                    return;
+                }
+
+                
+
+
+                $.ajax({
+                    url: '/api/Log',
+                    type: 'PUT',
+                    dataType: 'json',
+                    data: ulogovanKorisnik,
+                    success: function (data, textStatus, xhr) {
+                        console.log(data);
+                        alert("Uspesno ste uredili profil");
+                        sessionStorage["ulogovanKorisnik"] = JSON.stringify(data);
+                        showKorisnikInfo();
+                        
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        console.log('Error in Operation');
+                    }
+                });
+            });
+
+
+
+        });
+
+    </script>
+</head>
+<body style="background-color:#8db9a6">
+
+    <div align="left">
+        <h1 id="home" style="color:#000000;font-family:'Times New Roman', Times, serif;cursor:pointer">HOME</h1>
+    </div>
+    <hr />
+
+    <div id="profilDiv" class="center"></div>
+    <div id="urediKorisnik" class=" center">
+        <table id="korisniciUredi">
+            <tr><td>Korisnicko ime:<td><input type="text" id="korisnickoImeUredi" /></td></tr>
+            <tr><td>Lozinka:<td><input type="password" id="lozinkaUredi" /></td></tr>
+            <tr><td>Ime:<td><input type="text" id="imeUredi" /></td></tr>
+            <tr><td>Prezime:<td><input type="text" id="prezimeUredi" /></td></tr>
+            <tr><td>Pol:<td><input type="text" id="polUredi" /></td></tr>
+            <tr><td>Email:<td><input type="email" id="emailUredi" /></td></tr>
+            <tr><td>Datum rodjenja:<td><input type="date" id="datumUredi" /></td></tr>
+            <tr><td colspan="2" align="center"><input class="button" type="submit" id="urediSubmit" value="Uredi"/> </td></tr>
+
+
+        </table>
+    </div>
+</body>
+</html>

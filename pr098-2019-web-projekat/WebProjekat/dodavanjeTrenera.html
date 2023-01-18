@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <style>
+        .center {
+            margin: 0 auto;
+            width: 60%;
+            padding: 10px;
+        }
+
+        #dodajTrenera {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #dodajTrenera td, #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #dodajTrenera tr:nth-child(even) {
+                background-color: #8db9a6
+            }
+
+            #dodajTrenera tr:hover {
+                background-color: #3EB2FD;
+            }
+
+            #dodajTrenera th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+            }
+
+        .button {
+            align-items: center;
+            background-color: #3EB2FD;
+            background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+            background-size: calc(100% + 20px) calc(100% + 20px);
+            border-radius: 100px;
+            border-width: 0;
+            box-shadow: none;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: CircularStd,sans-serif;
+            font-size: 1rem;
+            height: auto;
+            justify-content: center;
+            line-height: 1.5;
+            padding: 6px 20px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color .2s,background-position .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: top;
+            white-space: nowrap;
+        }
+
+            .button:active,
+            .button:focus {
+                outline: none;
+            }
+
+            .button:hover {
+                background-position: -20px -20px;
+            }
+
+            .button:focus:not(:active) {
+                box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+            }
+
+    </style>
+
+ <script src="Scripts/jquery-3.3.1.js"></script>
+ <script type="text/javascript">
+
+
+     $(document).ready(function () {
+
+         var ulogovanKorisnik = JSON.parse(sessionStorage["ulogovanKorisnik"]);
+         console.log(ulogovanKorisnik);
+
+         $("#home").click(function () {
+             location.href = "index.html";
+         });
+
+         $("#home").hover(function () {
+             $("#home").css('color', 'white');
+         });
+
+         $("#home").mouseleave(function () {
+             $("#home").css('color', '#000000');
+         });
+
+         $("#trenerSubmit").click(function () {
+             console.log("odreagovao na klik");
+
+             var ids = ulogovanKorisnik.FitnesCentriId;
+             var a = false;
+             var b = false;
+             var ki = $("#korisnickoImeUredi").val();
+             var l = $("#lozinkaUredi").val();
+             var i = $("#imeUredi").val();
+             var pr = $("#prezimeUredi").val();
+             var e = $("#emailUredi").val();
+             var d = $("#datumUredi").val();
+             var f = $("#fitCentar").val();
+
+             console.log(f);
+             let muski = $("#radio1").is(":checked")
+             let zenski = $("#radio2").is(":checked")
+             
+             if (muski) {
+                 var p = 'm';
+             }
+             if (zenski) {
+                 p = 'f';
+             }
+
+
+             
+
+             console.log(b);
+
+             if (ki.length === 0 || l.length === 0 || i.length === 0 || pr.length === 0 || p === '' || e.length === 0 || d.length === 0 || f.length===0) {
+                 alert("Sva polja moraju biti popunjena!");
+                 return;
+             }            
+
+
+             
+             
+                 
+             
+
+             $.get("/api/FitnesCenter", function (data1, status) {
+
+
+                 $.get("/api/Korisnik", function (data, status) {
+                     for (item in data) {
+                         if (data[item].KorisnickoIme === ki) {
+                             console.log("usao u isto korisnicko ime");
+                             alert("Korisnik sa zadatim korisnickim imenom vec postoji!");
+                             b = true;
+
+
+                         }
+
+                     }
+
+                 
+                 console.log(b);
+                 for (item in data1)
+                 {
+                     if (b) {
+                         
+                         break;
+                     }
+                     if (data1[item].Naziv === f)
+                     {
+                         console.log("Usao u poklapanje po nazivu");
+                         for (centers in ids)
+                         {
+                             if (data1[item].Id === ids[centers])
+                             {
+                                 a = true;
+                                 console.log("Usao u poklapanje po id");
+                                 $.post('/api/Trener', { 'AngazovanUFitnesCentru': data1[item], 'KorisnickoIme': ki, 'Lozinka': l, 'Ime': i, 'Prezime': pr, 'Pol': p, 'Email': e, 'DatumRodjenja': d },
+                                     function (result) {
+                                         alert('Uspesno ste dodali trenera');
+                                         console.log(result);
+                                         location.href = "index.html";
+                                     }
+                                 ).fail(function (xhr, ajaxOptions, thrownError) {
+                                     alert('Error: ' + xhr.status);
+                                     });
+
+                                 break;
+                             }
+                         }
+
+                         if (a == true)
+                         {
+                             break;
+                         }
+                         
+                         
+                     }
+                     }
+                 });
+             });
+             
+                                                    
+           
+         });
+    });
+</script>
+</head>
+<body style="background-color:#8db9a6">
+    <div align="left">
+        <h1 id="home" style="color:#000000;font-family:'Times New Roman', Times, serif;cursor:pointer">HOME</h1>
+    </div>
+    <hr />
+
+    
+    <div id="dodajTreneraDiv" class=" center">
+        <table id="dodajTrenera">
+            <tr><td>Korisnicko ime:<td><input type="text" id="korisnickoImeUredi" /></td></tr>
+            <tr><td>Lozinka:<td><input type="password" id="lozinkaUredi" /></td></tr>
+            <tr><td>Ime:<td><input type="text" id="imeUredi" /></td></tr>
+            <tr><td>Prezime:<td><input type="text" id="prezimeUredi" /></td></tr>
+            <tr><td>Pol:</td><td>
+
+              <input id="radio1" checked="checked" type="radio" name="Gender" value='M' required> Male &nbsp; &nbsp; &nbsp; &nbsp;
+              <input id="radio2" type="radio" name="Gender" value="F" required> Female
+
+</td></tr>
+            <tr><td>Email:<td><input type="email" id="emailUredi" /></td></tr>
+            <tr><td>Datum rodjenja:<td><input type="date" id="datumUredi" /></td></tr>
+            <tr><td>Fitnes centar:<td><input type="text" id="fitCentar" /></td></tr>
+
+            <tr><td colspan="2" align="center"><input class="button" type="submit" id="trenerSubmit" value="Dodaj" /> </td></tr>
+
+
+        </table>
+    </div>
+</body>
+</html>

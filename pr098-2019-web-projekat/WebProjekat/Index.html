@@ -1,0 +1,760 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .center {
+            margin:0 auto;
+            width: 60%;
+            padding: 10px;
+        }
+
+
+        
+        
+        .button {
+            align-items: center;
+            background-color: #3EB2FD;
+            background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+            background-size: calc(100% + 20px) calc(100% + 20px);
+            border-radius: 100px;
+            border-width: 0;
+            box-shadow: none;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: CircularStd,sans-serif;
+            font-size: 1rem;
+            height: auto;
+            justify-content: center;
+            line-height: 1.5;
+            padding: 6px 20px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color .2s,background-position .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: top;
+            white-space: nowrap;
+        }
+
+        .button:active,
+        .button:focus {
+            outline: none;
+        }
+
+        .button:hover {
+            background-position: -20px -20px;
+        }
+
+        .button:focus:not(:active) {
+            box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+        }
+
+
+
+        .buttonOther {
+            align-items: center;
+            background-color: #3EB2FD;
+            background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+            background-size: calc(100% + 20px) calc(100% + 20px);
+            border-radius: 100px;
+            border-width: 0;
+            box-shadow: none;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: CircularStd,sans-serif;
+            font-size: 1rem;
+            height: auto;
+            justify-content: center;
+            line-height: 1.5;
+            padding: 6px 20px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color .2s,background-position .2s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: top;
+            white-space: nowrap;
+        }
+
+            .buttonOther:active,
+            .buttonOther:focus {
+                outline: none;
+            }
+
+            .buttonOther:hover {
+                background-position: -20px -20px;
+            }
+
+            .buttonOther:focus:not(:active) {
+                box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+            }
+
+
+
+        #centers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #centers td, #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #centers tr:nth-child(even) {
+                background-color: #8db9a6
+            }
+
+            #centers tr:hover {
+                background-color: #3EB2FD;
+            }
+
+            #centers th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+                
+            }
+
+
+
+        #centers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #sortTable td, #customers th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #sortTable tr:nth-child(even) {
+                background-color: #8db9a6
+            }
+
+            #sortTable tr:hover {
+                background-color: #3EB2FD;
+            }
+
+            #sortTable th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+            }
+
+
+        #pretragaTable td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #pretragaTable tr:nth-child(even) {
+            background-color: #8db9a6
+        }
+
+        #pretragaTable tr:hover {
+            background-color: #3EB2FD;
+        }
+
+        #pretragaTable th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+        }
+
+        select {
+            /* styling */
+            background-color: white;
+            border: thin solid blue;
+            border-radius: 4px;
+            display: inline-block;
+            font: inherit;
+            line-height: 1.5em;
+            padding: 0.5em 3.5em 0.5em 1em;
+            /* reset */
+            margin: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+            select.round {
+                background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), radial-gradient(#ddd 70%, transparent 72%);
+                background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - .5em) .5em;
+                background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
+                background-repeat: no-repeat;
+            }
+
+                select.round:focus {
+                    background-image: linear-gradient(45deg, white 50%, transparent 50%), linear-gradient(135deg, transparent 50%, white 50%), radial-gradient(gray 70%, transparent 72%);
+                    background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - .5em) .5em;
+                    background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
+                    background-repeat: no-repeat;
+                    border-color: green;
+                    outline: 0;
+                }
+
+
+    </style>
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+
+
+        $(document).ready(function () {
+
+            console.log(sessionStorage);
+
+            if (sessionStorage.length === 0) {
+                
+            }
+
+            else
+            {
+                var ulogovanKorisnik = JSON.parse(sessionStorage["ulogovanKorisnik"]);
+
+                var dugmad = '<button class=button id="profil">Profil</button>';
+                dugmad += '<button class="button" id="izlogujSe">Izloguj se</button>';
+                $("#loginRegDiv").html(dugmad);
+
+                console.log(ulogovanKorisnik.Uloga);
+                if (ulogovanKorisnik.Uloga === 0)
+                {
+                    dugmad+='<button class="button" id ="mojiTreninzi">Moji treninzi</button>';
+                    $("#loginRegDiv").html(dugmad);
+
+
+                    $("#loginRegDiv").on('click', '#mojiTreninzi', function () {
+                        location.href = "posetilacTreninzi.html";
+                    });
+
+
+                }
+
+                if (ulogovanKorisnik.Uloga == 2)
+                {
+                    dugmad += '<button class="button" id ="dodajTrenera">Dodaj Trenera</button>';
+                    $("#loginRegDiv").html(dugmad);
+
+                    $("#loginRegDiv").on('click', '#dodajTrenera', function () {
+                        location.href = "dodavanjeTrenera.html";
+                    });
+
+                }
+
+                if (ulogovanKorisnik.Uloga == 1)
+                {
+                    dugmad += '<button class="button" id ="dodajTrening">Dodaj trening</button>';
+                    $("#loginRegDiv").html(dugmad);
+
+                    $("#loginRegDiv").on('click', '#dodajTrening', function () {
+                        location.href = "dodavanjeTreninga.html";
+                    });
+
+                }
+                
+            }
+
+            
+            loadProducts();
+            $('#divImage').hover(function () {
+                let elem = $("#divImage")
+                elem.css("border", "2px green solid");
+            });
+
+
+            $('#divImage').mouseleave(function () {
+                let elem = $("#divImage")
+                elem.css("border", "transparent");
+            });
+
+            $('#registerButton').click(function () {
+                location.href = "register.html";
+            });
+
+
+            $("#login").click(function () {
+
+                var username = $("#logUsername").val();
+                var password = $("#logPassword").val();
+                console.log(username);
+                console.log(password);
+
+                $.post('/api/Log',{'LogUsername': username, 'LogPassword': password },
+                    function (result) {
+
+                        if (result.KorisnickoIme === username && result.Lozinka === password) {
+
+                            alert('Uspesno ste se logovali');
+                            console.log(result);
+                            sessionStorage["ulogovanKorisnik"] = JSON.stringify(result);
+                            console.log(sessionStorage);
+                            location.reload();
+                        }
+                        else
+                        {
+                            alert("Pogresno ste uneli korisnicko ime ili lozinku")
+                        }
+                    }
+                ).fail(function (xhr, ajaxOptions, thrownError) {
+                    alert('Error: ' + xhr.status);
+
+                });
+                
+                
+            });
+
+
+            $("#content").on('click', '.button', function () {
+                var nazivGyma = $(this).closest("tr").find("td:first-child").text();
+
+                $.get("/api/FitnesCenter", function (data, status) {
+
+                    for (item in data)
+                    {
+                        if (data[item].Naziv === nazivGyma)
+                        {
+                            console.log("Pronasao da su isti nazivi");
+                            var centar = data[item];
+                            console.log(centar);
+                            localStorage.clear();
+                            localStorage["centar"] = JSON.stringify(centar);
+                            console.log(localStorage);
+                            break;
+                        }
+                    }
+                    location.href = "details.html";
+                });                
+                    
+            });    
+            $("#searchButton").click(function () {
+
+                $.get("/api/FitnesCenter", function (data, status) {
+                    var pretragaNaziv = $("#pretragaNaziv").val();
+                    var pretragaAdresa = $("#pretragaAdresa").val();
+                    var pretragaOtvaranje = $("#pretragaOtvaranje").val();
+
+
+                    if (pretragaOtvaranje.length !== 0) {
+                        if (pretragaOtvaranje < 1700 || pretragaOtvaranje > 2022) {
+                            alert("Unesite validne godine otvaranja za pretragu");
+                            return;
+                        }
+                    }
+                    
+
+                    let tableOfCenters = '<table id="centers" border="1" style= margin-left:auto;margin-right:auto;>';
+                    tableOfCenters += '<tr><th style="text-align:center" colspan ="4">Fitnes Centar</th></tr>';
+                    tableOfCenters += '<tr><th>Naziv</th><th>Adresa</th><th>Godina otvaranja</th><th></th></tr>';
+
+
+                    for (element in data) {
+                        if (pretragaNaziv == data[element].Naziv && pretragaAdresa.length === 0 && pretragaOtvaranje.length === 0 ) {
+                            console.log("Usao u if za pretragu");
+                            let product = '<td>' + data[element].Naziv + '</td>';
+                            product += '<td>' + data[element].Adresa + '</td>';
+                            product += '<td>' + data[element].GodinaOtvaranja + '</td>';
+                            product += '<td><button id="detailButton" class="button" name="details">Detalji</button></td>';
+                            tableOfCenters += '<tr>' + product + '</tr>';
+                            break;
+                        }
+
+                        else if (pretragaNaziv.length === 0 && pretragaAdresa.length === 0 && pretragaOtvaranje.length === 0) {
+                            let product = '<td>' + data[element].Naziv + '</td>';
+                            product += '<td>' + data[element].Adresa + '</td>';
+                            product += '<td>' + data[element].GodinaOtvaranja + '</td>';
+                            product += '<td><button id="detailButton" class="button" name="details">Detalji</button></td>';
+                            tableOfCenters += '<tr>' + product + '</tr>';
+                            
+                            
+                        }
+
+                        else if (pretragaAdresa == data[element].Adresa && pretragaNaziv.length === 0 && pretragaOtvaranje.length === 0) {
+                            console.log("Usao u if za pretragu");
+                            let product = '<td>' + data[element].Naziv + '</td>';
+                            product += '<td>' + data[element].Adresa + '</td>';
+                            product += '<td>' + data[element].GodinaOtvaranja + '</td>';
+                            product += '<td><button id="detailButton" class="button" name="details">Detalji</button></td>';
+                            tableOfCenters += '<tr>' + product + '</tr>';
+                            break;
+                        }
+
+                        else if (pretragaOtvaranje == data[element].GodinaOtvaranja && pretragaNaziv.length === 0 && pretragaAdresa.length === 0) {
+                            console.log("Usao u if za pretragu");
+                            let product = '<td>' + data[element].Naziv + '</td>';
+                            product += '<td>' + data[element].Adresa + '</td>';
+                            product += '<td>' + data[element].GodinaOtvaranja + '</td>';
+                            product += '<td><button id="detailButton" class="button" name="details">Detalji</button></td>';
+                            tableOfCenters += '<tr>' + product + '</tr>';
+                            break;
+                        }
+
+
+                        else if (pretragaNaziv == data[element].Naziv && pretragaAdresa == data[element].Adresa && pretragaOtvaranje.length === 0) {
+                            console.log("Usao u if za pretragu");
+                            let product = '<td>' + data[element].Naziv + '</td>';
+                            product += '<td>' + data[element].Adresa + '</td>';
+                            product += '<td>' + data[element].GodinaOtvaranja + '</td>';
+                            product += '<td><button id="detailButton" class="button" name="details">Detalji</button></td>';
+                            tableOfCenters += '<tr>' + product + '</tr>';
+                            break;
+                        }
+
+
+                        else if (pretragaNaziv == data[element].Naziv && pretragaOtvaranje == data[element].GodinaOtvaranja && pretragaAdresa.length === 0) {
+                            console.log("Usao u if za pretragu");
+                            let product = '<td>' + data[element].Naziv + '</td>';
+                            product += '<td>' + data[element].Adresa + '</td>';
+                            product += '<td>' + data[element].GodinaOtvaranja + '</td>';
+                            product += '<td><button id="detailButton" class="button" name="details">Detalji</button></td>';
+                            tableOfCenters += '<tr>' + product + '</tr>';
+                            break;
+                        }
+
+                        else if (pretragaAdresa == data[element].Adresa && pretragaOtvaranje == data[element].GodinaOtvaranja && pretragaNaziv.length === 0) {
+                            console.log("Usao u if za pretragu");
+                            let product = '<td>' + data[element].Naziv + '</td>';
+                            product += '<td>' + data[element].Adresa + '</td>';
+                            product += '<td>' + data[element].GodinaOtvaranja + '</td>';
+                            product += '<td><button id="detailButton" class="button" name="details">Detalji</button></td>';
+                            tableOfCenters += '<tr>' + product + '</tr>';
+                            break;
+                        }
+
+
+                        else if (pretragaAdresa == data[element].Adresa && pretragaOtvaranje == data[element].GodinaOtvaranja && pretragaNaziv == data[element].Naziv) {
+                            console.log("Usao u if za pretragu");
+                            let product = '<td>' + data[element].Naziv + '</td>';
+                            product += '<td>' + data[element].Adresa + '</td>';
+                            product += '<td>' + data[element].GodinaOtvaranja + '</td>';
+                            product += '<td><button id="detailButton" class="button" name="details">Detalji</button></td>';
+                            tableOfCenters += '<tr>' + product + '</tr>';
+                            break;
+                        }
+
+
+                    }
+                    tableOfCenters += '</table>';
+                    $('#content').html(tableOfCenters);
+
+
+                });
+
+
+            });
+
+            $("#sortButton").click(function () {
+                console.log("Usao u klik na sort");
+                $.get("/api/FitnesCenter", function (data, status) {
+                    
+
+                    var kriterijum = $('#kriterijum').find(":selected").text();
+                    var tipSorta = $('#tipSorta').find(":selected").text();
+
+                    if (kriterijum == 'Naziv' && tipSorta == 'Rastuce') {
+                        console.log("Usao u if1");
+                        data.sort(function (x, y) {
+                            let a = x.Naziv.toUpperCase(),
+                                b = y.Naziv.toUpperCase();
+                            return a == b ? 0 : a > b ? 1 : -1;
+                        });
+
+                        let tableOfCenters = '<table id="centers" border="1" style= margin-left:auto;margin-right:auto;>';
+                        tableOfCenters += '<tr><th style="text-align:center" colspan ="4">Fitnes Centri</th></tr>';
+
+                        tableOfCenters += '<tr><th>Naziv</th><th>Adresa</th><th>Godina otvaranja</th><th></th></tr>';
+
+
+                        for (element in data) {
+
+
+                            console.log(data)
+                            let product = '<td>' + data[element].Naziv + '</td>';
+                            product += '<td>' + data[element].Adresa + '</td>';
+                            product += '<td>' + data[element].GodinaOtvaranja + '</td>';
+                            product += '<td><button id="detailButton" class="button" name="details">Detalji</button></td>';
+                            tableOfCenters += '<tr>' + product + '</tr>';
+                        }
+                        tableOfCenters += '</table>';
+                        $('#content').html(tableOfCenters);
+                    }
+                    else if (kriterijum == "Naziv" && tipSorta == "Opadajuce") {
+                        console.log("Usao u if2");
+                        data.sort((a, b) => {
+                            if (a.Naziv > b.Naziv)
+                                return -1;
+                            if (a.Naziv < b.Naziv)
+                                return 1;
+                            return 0;
+                        });
+
+                        let tableOfCenters = '<table id="centers" border="1" style= margin-left:auto;margin-right:auto;>';
+                        tableOfCenters += '<tr><th style="text-align:center" colspan ="4">Fitnes Centri</th></tr>';
+                        tableOfCenters += '<tr><th>Naziv</th><th>Adresa</th><th>Godina otvaranja</th><th></th></tr>';
+
+                        for (element in data) {
+
+
+                            console.log(data)
+                            let product = '<td>' + data[element].Naziv + '</td>';
+                            product += '<td>' + data[element].Adresa + '</td>';
+                            product += '<td>' + data[element].GodinaOtvaranja + '</td>';
+                            product += '<td><button id="detailButton" class="button" name="details">Detalji</button></td>';
+                            tableOfCenters += '<tr>' + product + '</tr>';
+                        }
+                        tableOfCenters += '</table>';
+                        $('#content').html(tableOfCenters);
+
+
+                    }
+
+                    else if (kriterijum == 'Adresa' && tipSorta == 'Rastuce') {
+                        data.sort(function (x, y) {
+                            let a = x.Adresa.toUpperCase(),
+                                b = y.Adresa.toUpperCase();
+                            return a == b ? 0 : a > b ? 1 : -1;
+                        });
+
+                        let tableOfCenters = '<table id="centers" border="1" style= margin-left:auto;margin-right:auto;>';
+                        tableOfCenters += '<tr><th style="text-align:center" colspan ="4">Fitnes Centri</th></tr>';
+                        tableOfCenters += '<tr><th>Naziv</th><th>Adresa</th><th>Godina otvaranja</th><th></th></tr>';
+
+                        for (element in data) {
+
+
+                            console.log(data)
+                            let product = '<td>' + data[element].Naziv + '</td>';
+                            product += '<td>' + data[element].Adresa + '</td>';
+                            product += '<td>' + data[element].GodinaOtvaranja + '</td>';
+                            product += '<td><button id="detailButton" class="button" name="details">Detalji</button></td>';
+                            tableOfCenters += '<tr>' + product + '</tr>';
+                        }
+                        tableOfCenters += '</table>';
+                        $('#content').html(tableOfCenters);
+                    }
+
+
+                    else if (kriterijum == "Adresa" && tipSorta == "Opadajuce") {
+                        
+                        data.sort((a, b) => {
+                            if (a.Adresa > b.Adresa)
+                                return -1;
+                            if (a.Adresa < b.Adresa)
+                                return 1;
+                            return 0;
+                        });
+
+                        let tableOfCenters = '<table id="centers" border="1" style= margin-left:auto;margin-right:auto;>';
+                        tableOfCenters += '<tr><th>Naziv</th><th>Adresa</th><th>Godina otvaranja</th><th></th></tr>';
+                        tableOfCenters += '<tr><th style="text-align:center" colspan ="4">Fitnes Centri</th></tr>';
+
+
+                        for (element in data) {
+
+
+                            console.log(data)
+                            let product = '<td>' + data[element].Naziv + '</td>';
+                            product += '<td>' + data[element].Adresa + '</td>';
+                            product += '<td>' + data[element].GodinaOtvaranja + '</td>';
+                            product += '<td><button id="detailButton" class="button" name="details">Detalji</button></td>';
+                            tableOfCenters += '<tr>' + product + '</tr>';
+                        }
+                        tableOfCenters += '</table>';
+                        $('#content').html(tableOfCenters);
+
+
+                    }
+
+
+                    else if (kriterijum == 'Godina otvaranja' && tipSorta == 'Rastuce') {
+                        data.sort(function (x, y) {
+                            return x.GodinaOtvaranja - y.GodinaOtvaranja;
+                        });
+                            
+                        
+
+                        let tableOfCenters = '<table id="centers" border="1" style= margin-left:auto;margin-right:auto;>';
+                        tableOfCenters += '<tr><th style="text-align:center" colspan ="4">Fitnes Centri</th></tr>';
+
+                        tableOfCenters += '<tr><th>Naziv</th><th>Adresa</th><th>Godina otvaranja</th><th></th></tr>';
+
+                        for (element in data) {
+
+
+                            console.log(data)
+                            let product = '<td>' + data[element].Naziv + '</td>';
+                            product += '<td>' + data[element].Adresa + '</td>';
+                            product += '<td>' + data[element].GodinaOtvaranja + '</td>';
+                            product += '<td><button id="detailButton" class="button" name="details">Detalji</button></td>';
+                            tableOfCenters += '<tr>' + product + '</tr>';
+                        }
+                        tableOfCenters += '</table>';
+                        $('#content').html(tableOfCenters);
+                    }
+
+
+                    else if (kriterijum == 'Godina otvaranja' && tipSorta == 'Opadajuce') {
+                        data.sort(function (x, y) {
+                            return y.GodinaOtvaranja - x.GodinaOtvaranja;
+                        });
+
+
+
+                        let tableOfCenters = '<table id="centers" border="1" style= margin-left:auto;margin-right:auto;>';
+                        tableOfCenters += '<tr><th style="text-align:center" colspan ="4">Fitnes Centri</th></tr>';
+
+                        tableOfCenters += '<tr><th>Naziv</th><th>Adresa</th><th>Godina otvaranja</th><th></th></tr>';
+
+                        for (element in data) {
+
+
+                            console.log(data)
+                            let product = '<td>' + data[element].Naziv + '</td>';
+                            product += '<td>' + data[element].Adresa + '</td>';
+                            product += '<td>' + data[element].GodinaOtvaranja + '</td>';
+                            product += '<td><button id="detailButton" class="button" name="details">Detalji</button></td>';
+                            tableOfCenters += '<tr>' + product + '</tr>';
+                        }
+                        tableOfCenters += '</table>';
+                        $('#content').html(tableOfCenters);
+                    }
+
+                            
+                    
+                });
+
+
+            });
+
+            $("#loginRegDiv").on('click', '#izlogujSe', function () {
+                var a = confirm("Da li ste sigurni da zelite da se izlogujete?");
+
+                if (a) {
+                    sessionStorage.clear();
+                    location.reload();
+                }
+
+            });
+
+            $("#loginRegDiv").on('click', '#profil', function () {
+                location.href = "Profil.html";
+            });
+
+            function loadProducts() {
+                console.log('loading centers...');
+                $.get("/api/FitnesCenter", function (data, status) {
+                    let tableOfCenters = '<table id="centers" border="1" style= margin-left:auto;margin-right:auto;>';
+                    tableOfCenters += '<tr><th style="text-align:center" colspan ="4">Fitnes Centri</th></tr>';
+                    tableOfCenters += '<tr><th>Naziv</th><th>Adresa</th><th>Godina otvaranja</th><th></th></tr>';
+
+                    
+
+                    data.sort(function (x, y) {
+                        let a = x.Naziv.toUpperCase(),
+                            b = y.Naziv.toUpperCase();
+                        return a == b ? 0 : a > b ? 1 : -1;
+                    });
+
+                    for (element in data) {
+
+
+                        console.log(data)
+                            let product = '<td>' + data[element].Naziv + '</td>';
+                        product += '<td>' + data[element].Adresa + '</td>';
+                        product += '<td>' + data[element].GodinaOtvaranja + '</td>';
+                        product += '<td><button id="detailButton" class="button" name="details">Detalji</button></td>';
+                        tableOfCenters += '<tr>' + product + '</tr>';
+                    }
+                    tableOfCenters += '</table>';
+                    $('#content').html(tableOfCenters);
+                    console.log('products loaded');
+                });
+            }
+        });
+            
+                
+    </script>
+
+</head>
+<body style="background-color:#8db9a6">
+    <div id="divImage" class="center" style="background-image:url(Images/gym.jfif);width:auto; height:100px">
+    </div>
+    <br id="br" />
+    
+    <div id="loginRegDiv" align="right">
+        
+            <input style="height:20px" placeholder="Username" type="text" id="logUsername" name="username" />
+            <input style="height:20px" placeholder="Password" type="password" id="logPassword" name="password" />
+            <input class="buttonOther" type="submit" value="login" id="login" />
+        
+        <button id="registerButton" class="buttonOther">Register</button>
+
+    </div>
+    
+    <hr id="hr" style="margin-left:auto;margin-right:auto;" />
+    <div class="center" id="pretragaDiv">
+        <table id="pretragaTable" border="1" style=margin-left:auto;margin-right:auto;>
+            <tr>
+                <td>
+                    <input type="text" name="naziv" id="pretragaNaziv" placeholder="Naziv" />
+                </td>
+                <td>
+                    <input type="text" name="adresa" id="pretragaAdresa" placeholder="Adresa" />
+
+                </td>
+                <td>
+                    <input type="number" name="godinaOtvaranja" id="pretragaOtvaranje" placeholder="Godina otvaranja" />
+
+                </td>
+                <td>
+                    <button class="buttonOther" id="searchButton">Pretrazi</button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <div class="center" id="content"></div>
+    <div id="sortDiv" class="center">
+        <table id="sortTable" border="1" style= margin-left:auto;margin-right:auto;>
+            <tr>
+                <td>
+                    <select class="round" name="kriterijum" id="kriterijum">
+                        <option value="naziv">Naziv</option>
+                        <option value="adresa">Adresa</option>
+                        <option value="godinaOtvaranja">Godina otvaranja</option>
+                    </select>
+                </td>
+                <td>
+                    <select class="round" name="tipSorta" id="tipSorta">
+                        <option value="rastuce">Rastuce</option>
+                        <option value="opadajuce">Opadajuce</option>
+                    </select>
+                </td>
+                <td>
+                    <button class="buttonOther" id="sortButton">Sortiraj</button>
+                </td>
+            </tr>
+        </table>
+
+
+    </div>
+    
+
+</body>
+</html>
